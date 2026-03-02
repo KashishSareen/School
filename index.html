@@ -1,803 +1,347 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-
-    <!-- Demo styles -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      :root {
-        --primary-color: #1a5276;
-        --secondary-color: #d35400;
-        --accent-color: #f39c12;
-        --light-color: #f8f9fa;
-        --dark-color: #2c3e50;
-        --text-color: #333;
-        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      body {
-        color: var(--text-color);
-        line-height: 1.6;
-        background-color: #f5f7fa;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Header Styles */
-      header {
-        background-color: var(--primary-color);
-        color: white;
-        padding: 1rem 0;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: var(--shadow);
-      }
-
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .logo-icon {
-        font-size: 2.5rem;
-        color: var(--accent-color);
-      }
-
-      .logo-text h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-      }
-
-      .logo-text p {
-        font-size: 0.8rem;
-        opacity: 0.8;
-      }
-
-      nav ul {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-        position: relative;
-      }
-
-      nav a:hover {
-        color: var(--accent-color);
-      }
-
-      nav a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background: var(--accent-color);
-        bottom: -5px;
-        left: 0;
-        transition: width 0.3s;
-      }
-
-      nav a:hover::after {
-        width: 100%;
-      }
-
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-      /* 1. Make the Slider full screen */
-      .swiper {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-      }
-
-      /* 2. Style the static text to stay in center - Full width height with blur */
-      .hero-static-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10; /* Keep it above the slides */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: none; /* Allows clicking through to slider buttons if needed */
-      }
-
-      .hero-static-content .container {
-        height: 100vh;
-        max-width: 100% !important;
-        border-radius: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw !important;
-        text-align: center;
-        color: white;
-        padding: 40px 20px !important;
-        background: linear-gradient(
-          135deg,
-          rgba(26, 82, 118, 0.8) 0%,
-          rgba(26, 82, 118, 0.8) 50%,
-          rgba(26, 82, 118, 0.8) 100%
-        );
-      }
-
-      /* 3. Style the background slides - Full coverage */
-      .swiper-slide {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-      }
-
-      .cta-button {
-        display: inline-block;
-        width: 30%;
-        padding: 12px 30px;
-        background: #ff9800;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        margin-top: 20px;
-      }
-      .cta-button:hover {
-        background-color: transparent;
-        color: var(--secondary-color);
-      }
-
-      /* Founder Section */
-      .founder-section {
-        padding: 5rem 0;
-        background-color: white;
-      }
-
-      .section-title {
-        text-align: center;
-        margin-bottom: 3rem;
-        color: var(--primary-color);
-        position: relative;
-      }
-
-      .section-title::after {
-        content: "";
-        position: absolute;
-        width: 80px;
-        height: 3px;
-        background-color: var(--secondary-color);
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .founder-content {
-        display: flex;
-        gap: 3rem;
-        align-items: center;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .founder-image {
-        flex: 0 0 300px;
-        height: 350px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-        position: relative;
-      }
-
-      .founder-image::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.1),
-          rgba(0, 0, 0, 0.2)
-        );
-        border-radius: 10px;
-      }
-
-      .founder-info {
-        flex: 1;
-      }
-
-      .founder-info h3 {
-        color: var(--primary-color);
-        margin-bottom: 0.5rem;
-        font-size: 1.8rem;
-      }
-
-      .founder-info .title {
-        color: var(--secondary-color);
-        font-weight: 600;
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .founder-details {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .detail-item h4 {
-        color: var(--primary-color);
-        font-size: 0.9rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .detail-item p {
-        font-size: 1rem;
-        font-weight: 500;
-      }
-
-      .founder-bio {
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #ddd;
-      }
-
-      .founder-bio p {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.7;
-      }
-
-      /* Slider Section */
-      .slider-section {
-        padding: 5rem 0;
-        background-color: var(--light-color);
-      }
-
-      .slider-container {
-        position: relative;
-        max-width: 900px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-      }
-
-      .slider {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      .slide {
-        min-width: 100%;
-        height: 500px;
-        background-size: cover;
-        background-position: center;
-      }
-
-      .slider-nav {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-        gap: 1rem;
-      }
-
-      .slider-btn {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.2rem;
-        transition: all 0.3s;
-      }
-
-      .slider-btn:hover {
-        background-color: var(--secondary-color);
-      }
-
-      .slide-indicators {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 1.5rem;
-      }
-
-      .indicator {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #ccc;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .indicator.active {
-        background-color: var(--primary-color);
-      }
-
-      /* About Section */
-      .about-section {
-        padding: 5rem 0;
-        background-color: white;
-      }
-
-      .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        align-items: center;
-      }
-
-      .about-text h3 {
-        color: var(--primary-color);
-        margin-bottom: 1.5rem;
-        font-size: 1.8rem;
-      }
-
-      .about-text p {
-        margin-bottom: 1.5rem;
-      }
-
-      .highlight-box {
-        background-color: var(--light-color);
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-        border-left: 5px solid var(--secondary-color);
-      }
-
-      .highlight-box h4 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-      }
-
-      /* Objectives Section */
-      .objectives-section {
-        padding: 5rem 0;
-        background-color: var(--light-color);
-      }
-
-      .objectives-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-
-      .objective-card {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-        transition: transform 0.3s;
-        border-top: 4px solid var(--primary-color);
-      }
-
-      .objective-card:hover {
-        transform: translateY(-10px);
-      }
-
-      .objective-card i {
-        font-size: 2.5rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-      }
-
-      .objective-card h4 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-      }
-
-      /* Contact Section */
-      .contact-section {
-        padding: 5rem 0;
-        background-color: white;
-      }
-
-      .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-      }
-
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      .contact-item i {
-        font-size: 1.5rem;
-        color: var(--primary-color);
-        margin-top: 5px;
-      }
-
-      .map-container {
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        height: 300px;
-      }
-
-      /* Footer */
-      footer {
-        background-color: var(--dark-color);
-        color: white;
-        padding: 3rem 0 1.5rem;
-        text-align: center;
-      }
-
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      .footer-section h4 {
-        color: var(--accent-color);
-        margin-bottom: 1.5rem;
-        font-size: 1.2rem;
-      }
-
-      .footer-section p {
-        opacity: 0.8;
-        margin-bottom: 1rem;
-      }
-
-      .copyright {
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        font-size: 0.9rem;
-        opacity: 0.7;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 992px) {
-        .about-content,
-        .contact-content {
-          grid-template-columns: 1fr;
-        }
-
-        .hero h2 {
-          font-size: 4rem;
-        }
-
-        .founder-content {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .founder-image {
-          flex: 0 0 250px;
-          width: 250px;
-        }
-        .hero-inner h2 {
-          font-size: 2rem; /* Smaller text for mobile */
-          line-height: 1.3;
-        }
-
-        .hero-inner p {
-          font-size: 2rem;
-          margin: 15px 0;
-        }
-
-        .hero-inner {
-          width: 90%; /* Use more width on small screens */
-          padding: 15px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero-inner h2 {
-          font-size:3rem; /* Smaller text for mobile */
-          line-height: 1.3;
-        }
-
-        .hero-inner p {
-          font-size: 2rem;
-          margin: 15px 0;
-        }
-
-        .hero-inner {
-          width: 90%; /* Use more width on small screens */
-          padding: 15px;
-        }
-        .header-content {
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        nav ul {
-          display: none;
-          flex-direction: column;
-          text-align: center;
-          width: 100%;
-          margin-top: 1rem;
-        }
-
-        nav ul.active {
-          display: flex;
-        }
-
-        .mobile-menu-btn {
-          display: block;
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-        }
-
-        .hero {
-          padding-top: 150px;
-        }
-
-        .hero h2 {
-          font-size: 2rem;
-        }
-
-        .slide {
-          height: 350px;
-        }
-
-        .founder-details {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .hero h2 {
-          font-size: 1.8rem;
-        }
-
-        .slide {
-          height: 250px;
-        }
-
-        .objective-card {
-          padding: 1.5rem;
-        }
-
-        .founder-image {
-          flex: 0 0 200px;
-          width: 200px;
-          height: 250px;
-        }
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sant Tukaram Pradnyavardhini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+    .whatsapp-float:hover { transform: translateY(-4px); }
+    .whatsapp-float svg { width: 28px; height: 28px; color: #ffffff; fill: currentColor; }
+  </style>
+  <body class="bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header>
-      <div class="container header-content">
-        <div class="logo">
-          <div class="logo-icon">
-            <img
-              src="https://ik.imagekit.io/referindia/sant_tukaram.jpeg"
-              alt="Sant Tukaram Pradnyavardhini Logo"
-              style="height: 80px; width: auto; border-radius: 10px"
-            />
-          </div>
-          <div class="logo-text">
-            <h1>Sant Tukaram Pradnyavardhini</h1>
-            <p>Formerly Sant Tukaram Salvation Mission, Malad</p>
+    <header class="bg-[#1a5276] text-white w-full z-50 shadow-md">
+      <div
+        class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            src="https://ik.imagekit.io/referindia/sant_tukaram.jpeg"
+            class="h-16 rounded-lg"
+          />
+          <div>
+            <h1 class="text-xl font-semibold">Sant Tukaram Pradnyavardhini</h1>
+            <p class="text-sm opacity-80">
+              Formerly Sant Tukaram Salvation Mission, Malad
+            </p>
           </div>
         </div>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <nav>
-          <ul id="navMenu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#founder">Founder</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#objectives">Objectives</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <nav class="hidden md:flex gap-8 font-medium">
+          <a
+            href="#home"
+            class="hover:text-orange-400 hover:border-b border-orange-400"
+            >Home</a
+          >
+          <a
+            href="#founder"
+            class="hover:text-orange-400 hover:border-b border-orange-400"
+            >Founder</a
+          >
+          <a
+            href="#about"
+            class="hover:text-orange-400 hover:border-b border-orange-400"
+            >About</a
+          >
+          <a
+            href="#objective"
+            class="hover:text-orange-400 hover:border-b border-orange-400"
+            >Objectives</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-orange-400 hover:border-b border-orange-400"
+            >Contact</a
+          >
         </nav>
       </div>
     </header>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-32 min-h-screen flex items-center text-center text-white bg-cover bg-center"
+      style="
+        background-image:
+          linear-gradient(rgba(26, 82, 118, 0.85), rgba(26, 82, 118, 0.9)),
+          url(&quot;/images/school1.jpeg&quot;);
+      "
+    >
+      <div class="max-w-3xl mx-auto px-5">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+          Promoting Universal Brotherhood Through Vedic Principles
+        </h2>
+        <p class="text-lg mb-8 opacity-90">
+          Established on 20th April 1950, Sant Tukaram Pradnyavardhini is a
+          Public Charitable Trust dedicated to education, cultural preservation,
+          and spiritual growth.
+        </p>
 
-    <!-- Swiper -->
-    <section class="swiper mySwiper" style="min-height: 100vh">
-      <!-- FIXED TEXT OVERLAY (Outside swiper-wrapper) -->
-      <div class="hero-static-content">
-        <div class="container">
-          <h2>Promoting Universal Brotherhood Through Vedic Principles</h2>
-          <p>
-            Established on 20th April 1950, Sant Tukaram Pradnyavardhini is a
-            Public Charitable Trust dedicated to education, cultural
-            preservation, and spiritual growth.
-          </p>
-          <a href="#founder" class="cta-button">Learn About Our Founder</a>
-        </div>
+        <a
+          href="#founder"
+          class="inline-block bg-orange-600 hover:bg-transparent hover:border-orange-600 border-2 border-orange-600 px-8 py-3 rounded-full uppercase tracking-wider font-semibold transition"
+        >
+          Learn About Our Founder
+        </a>
       </div>
-
-      <!-- SLIDING BACKGROUNDS -->
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div
-          class="swiper-slide"
-          style="background-image: url(&quot;/images/school 1.jpeg&quot;)"
-        ></div>
-        <!-- Slide 2 -->
-        <div
-          class="swiper-slide"
-          style="background-image: url(&quot;/images/school 2.jpeg&quot;)"
-        ></div>
-        <!-- Slide 3 -->
-        <div
-          class="swiper-slide"
-          style="background-image: url(&quot;/images/school 3.jpeg&quot;)"
-        ></div>
-      </div>
-
-      <!-- Optional Controls -->
-      <!-- <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div> -->
-      <div class="swiper-pagination"></div>
     </section>
+
     <!-- Founder Section -->
-    <section class="founder-section" id="founder">
-      <div class="container">
-        <h2 class="section-title">Our Founder</h2>
+    <section id="founder" class="bg-white py-16 w-full">
+      <!-- Title -->
+      <div class="w-full mb-12 flex flex-col items-center justify-center gap-5">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[#1a5276] text-center pb-4"
+        >
+          Our Founder
+          <hr class="border-b-4 border-orange-400 w-[50%] mt-2 ml-14" />
+        </h2>
+      </div>
 
-        <div class="founder-content">
-          <div
-            class="founder-image"
-            style="
-              background-image: url(&quot;https://ik.imagekit.io/referindia/School/STP5.jpeg&quot;);
-            "
+      <!-- Main Container -->
+      <div
+        class="w-full flex flex-col lg:flex-row items-center justify-center gap-12 px-6"
+      >
+        <!-- Image -->
+        <div
+          class="w-full sm:w-[85%] md:w-[65%] lg:w-[35%] h-[280px] sm:h-[320px] md:h-[420px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl"
+        >
+          <img
+            src="./images/founder.webp"
+            class="w-full h-full object-cover transition duration-500 hover:scale-105"
+          />
+        </div>
+
+        <!-- Content -->
+        <div
+          class="w-full lg:w-[45%] bg-gray-50 p-6 md:p-8 rounded-2xl shadow-xl text-center lg:text-left"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold text-[#1a5276] mb-2">
+            Bhalchandra R. Gokhale
+          </h3>
+
+          <p
+            class="text-orange-600 uppercase tracking-wider font-semibold mb-6 text-sm md:text-base"
           >
-            <!-- Replace with your founder image URL -->
-          </div>
+            Founder of Sant Tukaram Pradnyavardhini
+          </p>
 
-          <div class="founder-info">
-            <h3>Bhalchandra R. Gokhale</h3>
-            <div class="title">Founder of Sant Tukaram Pradnyavardhini</div>
-
-            <div class="founder-details">
-              <div class="detail-item">
-                <h4>Birth</h4>
-                <p>5 August 1917</p>
-              </div>
-              <div class="detail-item">
-                <h4>Death</h4>
-                <p>9 May 1980</p>
-              </div>
-              <div class="detail-item">
-                <h4>Key Role</h4>
-                <p>Initiator & Chief Founder</p>
-              </div>
-              <div class="detail-item">
-                <h4>Trustees</h4>
-                <p>Led 7 other trustees</p>
-              </div>
+          <!-- Details -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div>
+              <h4 class="text-sm text-[#1a5276] font-semibold">Birth</h4>
+              <p>5 August 1917</p>
             </div>
 
-            <div class="founder-bio">
-              <p>
-                Shri B. R. Gokhale was the visionary initiator who took the lead
-                in establishing Sant Tukaram Pradnyavardhini (erstwhile Sant
-                Tukaram Salvation Mission, Malad) along with 7 other trustees.
-                His leadership was instrumental in promoting Universal
-                Brotherhood through propagation of Vedic Principles and setting
-                the foundation for the trust's constitution adopted on 13th
-                December 1953.
-              </p>
-              <p style="margin-top: 1rem">
-                Under his guidance, the trust was registered at Thane [E-81
-                dated 1.1.1954] and subsequently at Mumbai [E4137 dated
-                19.12.1973], establishing a lasting legacy of education,
-                cultural preservation, and spiritual growth that continues to
-                thrive today.
-              </p>
+            <div>
+              <h4 class="text-sm text-[#1a5276] font-semibold">Death</h4>
+              <p>9 May 1980</p>
+            </div>
+
+            <div>
+              <h4 class="text-sm text-[#1a5276] font-semibold">Key Role</h4>
+              <p>Initiator & Chief Founder</p>
+            </div>
+
+            <div>
+              <h4 class="text-sm text-[#1a5276] font-semibold">Trustees</h4>
+              <p>Led 7 other trustees</p>
             </div>
           </div>
+
+          <!-- Bio -->
+          <p
+            class="text-gray-700 leading-relaxed border-t pt-6 mb-4 text-sm md:text-base"
+          >
+            Shri B. R. Gokhale was the visionary initiator who took the lead in
+            establishing Sant Tukaram Pradnyavardhini (erstwhile Sant Tukaram
+            Salvation Mission, Malad) along with 7 other trustees. His
+            leadership was instrumental in promoting Universal Brotherhood
+            through propagation of Vedic Principles and setting the foundation
+            for the trust's constitution adopted on 13th December 1953.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+            Under his guidance, the trust was registered at Thane [E-81 dated
+            1.1.1954] and subsequently at Mumbai [E4137 dated 19.12.1973],
+            establishing a lasting legacy of education, cultural preservation,
+            and spiritual growth that continues to thrive today.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Slider Section -->
-    <section class="slider-section" id="gallery">
-      <div class="container">
-        <h2 class="section-title">Our Activities & Initiatives</h2>
+    <!-- Activities Section -->
+<section
+  id="activity"
+  class="w-full flex flex-col items-center py-16 lg:py-0"
+>
+  <!-- Title -->
+  <div class="w-full py-6">
+    <h2
+      class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a5276] text-center"
+    >
+      Our Activities & Initiatives
+    </h2>
+  </div>
 
-        <div class="slider-container">
-          <div class="slider" id="imageSlider">
-            <!-- Slides will be added here dynamically -->
+  <!-- Swiper Container -->
+  <div class="w-full flex justify-center px-4 py-8">
+    <div class="w-[90%] md:w-[75%] lg:w-[60%]">
+      
+      <div class="swiper mySwiper ">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src="https://ik.imagekit.io/referindia/School/STP4.jpeg"
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+
+          <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src="https://ik.imagekit.io/referindia/School/STP.jpeg"
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+
+          <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src="https://ik.imagekit.io/referindia/School/STP2.jpeg"
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+           <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='https://ik.imagekit.io/referindia/School/STP3.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act1.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act2.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act3.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act4.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act5.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+              <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act6.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
+          </div>
+              <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
+            <img
+              src='./images/act7.jpeg'
+              class="max-h-full max-w-full object-contain rounded-xl"
+            />
           </div>
         </div>
 
-        <div class="slider-nav">
-          <button class="slider-btn" id="prevBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="slider-btn" id="nextBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-
-        <div class="slide-indicators" id="indicators">
-          <!-- Indicators will be added dynamically -->
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
-    </section>
 
+    </div>
+  </div>
+</section>
     <!-- About Section -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <h2 class="section-title">About Our Trust</h2>
+    <section
+      id="about"
+      class="bg-white min-h-screen w-full flex items-center px-6 md:px-16 py-16"
+    >
+      <div class="w-full max-w-6xl mx-auto">
+        <!-- Heading -->
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-[#1a5276]">About Our Trust</h2>
+        </div>
 
-        <div class="about-content">
-          <div class="about-text">
-            <h3>Our History & Foundation</h3>
-            <p>
-              Sant Tukaram Pradnyavardhini (erstwhile Sant Tukaram Salvation
-              Mission, Malad) is a Public Charitable Trust, established on 20th
-              April 1950 and was registered at Thane [E-81 dated 1.1.1954] and
-              subsequently at Mumbai [E4137 dated 19.12.1973].
-            </p>
-            <p>
-              The Trust was established by the initiative taken by Shri B. R.
-              Gokhale and 7 other trustees to promote Universal Brotherhood
-              through propagation of Vedic Principles. The first constitution
-              was adopted by the General Body on 13th December 1953.
-            </p>
+        <!-- Content -->
+        <div class="flex flex-col lg:flex-row gap-16">
+          <!-- Left -->
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-2xl md:text-3xl font-bold text-[#1a5276] mb-6 text-center md:text-left whitespace-nowrap"
+              >
+                Our History & Foundation
+              </h3>
 
-            <div class="highlight-box">
-              <h4>Our Mission</h4>
-              <p>
+              <p class="mb-6 text-gray-700 leading-7 text-[16px]">
+                Sant Tukaram Pradnyavardhini (erstwhile Sant Tukaram Salvation
+                Mission, Malad) is a Public Charitable Trust, established on
+                20th April 1950 and was registered at Thane [E-81 dated
+                1.1.1954] and subsequently at Mumbai [E4137 dated 19.12.1973].
+              </p>
+
+              <p class="text-gray-700 leading-7 text-[16px]">
+                The Trust was established by the initiative taken by Shri B. R.
+                Gokhale and 7 other trustees to promote Universal Brotherhood
+                through propagation of Vedic Principles. The first constitution
+                was adopted by the General Body on 13th December 1953.
+              </p>
+            </div>
+
+            <!-- Mission -->
+            <div
+              class="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-600 mt-8"
+            >
+              <h4 class="text-xl font-semibold text-[#1a5276] mb-3">
+                Our Mission
+              </h4>
+              <p class="text-gray-700 leading-7 text-[16px]">
                 To propagate universal brotherhood and friendship through
                 education, cultural preservation, and spiritual teachings based
                 on Vedic principles and the teachings of Maharshi Dayanand
@@ -806,45 +350,68 @@
             </div>
           </div>
 
-          <div class="about-text">
-            <h3>Our Vision</h3>
-            <p>
-              We envision a society where universal brotherhood is realized
-              through the understanding and application of timeless Vedic
-              principles, combined with modern education and cultural
-              preservation.
-            </p>
+          <!-- Right -->
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-3xl font-bold text-[#1a5276] mb-6">Our Vision</h3>
 
-            <h3>Our Approach</h3>
-            <p>
-              We work through educational institutions, research centers,
-              publications, seminars, and community activities to achieve our
-              objectives of promoting harmony, education, and cultural
-              understanding.
-            </p>
+              <p class="mb-8 text-gray-700 leading-7 text-[16px]">
+                We envision a society where universal brotherhood is realized
+                through the understanding and application of timeless Vedic
+                principles, combined with modern education and cultural
+                preservation.
+              </p>
 
-            <h3>Key Focus Areas</h3>
-            <ul>
-              <li>Education at all levels</li>
-              <li>Cultural preservation and research</li>
-              <li>Health and wellness through Yoga</li>
-              <li>Spiritual teachings and values</li>
-            </ul>
+              <h3 class="text-3xl font-bold text-[#1a5276] mb-6">
+                Our Approach
+              </h3>
+
+              <p class="text-gray-700 leading-7 text-[16px]">
+                We work through educational institutions, research centers,
+                publications, seminars, and community activities to achieve our
+                objectives of promoting harmony, education, and cultural
+                understanding.
+              </p>
+            </div>
+
+            <!-- Key Focus -->
+            <div class="mt-8">
+              <h3 class="text-3xl font-bold text-[#1a5276] mb-4">
+                Key Focus Areas
+              </h3>
+
+              <ul class="list-disc pl-6 space-y-2 text-gray-700 text-[16px]">
+                <li>Education at all levels</li>
+                <li>Cultural preservation and research</li>
+                <li>Health and wellness through Yoga</li>
+                <li>Spiritual teachings and values</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Objectives Section -->
-    <section class="objectives-section" id="objectives">
-      <div class="container">
-        <h2 class="section-title">Our Aims & Objectives</h2>
+    <section id="objective" class="w-full bg-[#f3f4f6] pt-15">
+      <!-- Heading -->
+      <div class="flex items-center justify-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1a5276] text-center">
+          Our Aims & Objectives
+        </h2>
+      </div>
 
-        <div class="objectives-grid">
-          <div class="objective-card">
-            <i class="fas fa-graduation-cap"></i>
-            <h4>Education & Institutions</h4>
-            <p>
+      <!-- Cards Wrapper -->
+      <div class="px-6 md:px-12 lg:px-20 pb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-start border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+          >
+            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
+              Education & Institutions
+            </h3>
+            <p class="text-gray-700 leading-7 text-[15px]">
               To propagate universal brotherhood through education, establishing
               Pre-primary to Higher secondary Schools, Residential schools,
               Hostels, Colleges and Institutions for Arts, Science, Commerce,
@@ -853,49 +420,69 @@
             </p>
           </div>
 
-          <div class="objective-card">
-            <i class="fas fa-book-reader"></i>
-            <h4>Libraries & Health Centers</h4>
-            <p>
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+          >
+            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
+              Libraries & Health Centers
+            </h3>
+            <p class="text-gray-700 leading-7 text-[15px]">
               Establish Libraries, Gymnasiums, Yoga and Health Centers to
               promote physical and mental well-being alongside intellectual
               growth.
             </p>
           </div>
 
-          <div class="objective-card">
-            <i class="fas fa-microscope"></i>
-            <h4>Research Centers</h4>
-            <p>
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+          >
+            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
+              Research Centers
+            </h3>
+            <p class="text-gray-700 leading-7 text-[15px]">
               Establish Research Centers for the Studies in Indian Literature,
               Culture, Arts and History to preserve and promote India's rich
               heritage.
             </p>
           </div>
 
-          <div class="objective-card">
-            <i class="fas fa-bullhorn"></i>
-            <h4>Lectures & Publications</h4>
-            <p>
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+          >
+            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
+              Lectures & Publications
+            </h3>
+            <p class="text-gray-700 leading-7 text-[15px]">
               Organize Lectures, Workshops, Seminars, Forums, Publications,
               Exhibitions for propagation of its Objectives and sharing
               knowledge.
             </p>
           </div>
 
-          <div class="objective-card">
-            <i class="fas fa-hands-praying"></i>
-            <h4>Spiritual Teachings</h4>
-            <p>
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+          >
+            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
+              Spiritual Teachings
+            </h3>
+            <p class="text-gray-700 leading-7 text-[15px]">
               Propagate teachings of Maharshi Dayanand Saraswati and Sant
               Tukaram to promote spiritual growth and ethical living.
             </p>
           </div>
 
-          <div class="objective-card">
-            <i class="fas fa-handshake"></i>
-            <h4>Universal Brotherhood</h4>
-            <p>
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+          >
+            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
+              Universal Brotherhood
+            </h3>
+            <p class="text-gray-700 leading-7 text-[15px]">
               Promote universal brotherhood and friendship among all communities
               through shared values and collaborative initiatives.
             </p>
@@ -905,238 +492,190 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact Information</h2>
+    <section id="contact" class="w-full bg-white py-16">
+      <!-- Heading -->
+      <div class="w-full text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a5276]">
+          Contact Information
+        </h2>
+      </div>
 
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email Address</h4>
-                <p>stsmission@gmail.com</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Registered Address</h4>
-                <p>
-                  Gajanan Niwas, Off Liberty Garden Road No. 1, Opposite
-                  Trimurti Tower, Malad West, Mumbai – 400064
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fas fa-history"></i>
-              <div>
-                <h4>Established</h4>
-                <p>20th April 1950</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fas fa-university"></i>
-              <div>
-                <h4>Registration</h4>
-                <p>
-                  Thane [E-81 dated 1.1.1954]<br />Mumbai [E4137 dated
-                  19.12.1973]
-                </p>
-              </div>
+      <!-- Content -->
+      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto px-6 lg:px-12">
+        <!-- Left Column -->
+        <div class="space-y-8">
+          <div class="flex gap-4">
+            <i class="fas fa-envelope text-2xl text-[#1a5276] mt-1"></i>
+            <div>
+              <h4 class="font-semibold text-lg">Email Address</h4>
+              <p class="text-gray-700 mt-1">stsmission@gmail.com</p>
             </div>
           </div>
-          <div class="map-container">
-            <!-- Google Map Embed -->
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.9527023344344!2d72.84124767435276!3d19.18639304849928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6faba029f89%3A0xfeebe8da6d9ec825!2sSts%20Mission%20English%20High%20School!5e1!3m2!1sen!2sin!4v1766896219503!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
+
+          <div class="flex gap-4">
+            <i class="fas fa-map-marker-alt text-2xl text-[#1a5276] mt-1"></i>
+            <div>
+              <h4 class="font-semibold text-lg">Registered Address</h4>
+              <p class="text-gray-700 mt-1 leading-7">
+                Gajanan Niwas, Off Liberty Garden Road No. 1, Opposite Trimurti
+                Tower, Malad West, Mumbai – 400064
+              </p>
+            </div>
           </div>
+
+          <div class="flex gap-4">
+            <i class="fas fa-history text-2xl text-[#1a5276] mt-1"></i>
+            <div>
+              <h4 class="font-semibold text-lg">Established</h4>
+              <p class="text-gray-700 mt-1">20th April 1950</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <i class="fas fa-university text-2xl text-[#1a5276] mt-1"></i>
+            <div>
+              <h4 class="font-semibold text-lg">Registration</h4>
+              <p class="text-gray-700 mt-1 leading-7">
+                Thane [E-81 dated 1.1.1954] <br />
+                Mumbai [E4137 dated 19.12.1973]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div
+          class="rounded-xl overflow-hidden shadow-xl h-72 sm:h-80 md:h-full"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.9527023344344!2d72.84124767435276!3d19.18639304849928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6faba029f89%3A0xfeebe8da6d9ec825!2sSts%20Mission%20English%20High%20School!5e1!3m2!1sen!2sin!4v1766896219503!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>Sant Tukaram Pradnyavardhini</h4>
-            <p>Formerly Sant Tukaram Salvation Mission, Malad</p>
-            <p>A Public Charitable Trust established in 1950</p>
+    <!-- Footer Section-->
+    <footer class="bg-[#2c3e50] text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 text-center md:text-left"
+        >
+          <!-- Column 1 -->
+          <div class="text-center">
+            <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
+              Sant Tukaram Pradnyavardhini
+            </h4>
+            <p class="text-gray-300 leading-7">
+              Formerly Sant Tukaram Salvation Mission, Malad
+            </p>
+            <p class="text-gray-300 mt-4 leading-7">
+              A Public Charitable Trust established in 1950
+            </p>
           </div>
 
-          <div class="footer-section">
-            <h4>Our Mission</h4>
-            <p>
+          <!-- Column 2 -->
+          <div class="text-center">
+            <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
+              Our Mission
+            </h4>
+            <p class="text-gray-300 leading-7 md:max-w-sm">
               To promote Universal Brotherhood through propagation of Vedic
               Principles and education for all.
             </p>
           </div>
 
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <p><a href="#home" style="color: white">Home</a></p>
-            <p><a href="#founder" style="color: white">Founder</a></p>
-            <p><a href="#about" style="color: white">About Us</a></p>
-            <p><a href="#objectives" style="color: white">Objectives</a></p>
-            <p><a href="#contact" style="color: white">Contact</a></p>
+          <!-- Column 3 -->
+          <div class="text-center">
+            <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
+              Quick Links
+            </h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>
+                <a href="#home" class="hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#founder"
+                  class="hover:text-white transition duration-300"
+                  >Founder</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-white transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#objectives"
+                  class="hover:text-white transition duration-300"
+                  >Objectives</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="copyright">
-          <p>&copy; 2026 Sant Tukaram Pradnyavardhini. All Rights Reserved.</p>
+        <!-- Divider -->
+        <div
+          class="border-t border-white/20 mt-14 pt-6 text-center font-semibold"
+        >
+          <p class="text-gray-300 text-sm">
+            &copy; 2026 Sant Tukaram Pradnyavardhini. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
-
-    <script>
-      // Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-      const navMenu = document.getElementById("navMenu");
-
-      mobileMenuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        mobileMenuBtn.innerHTML = navMenu.classList.contains("active")
-          ? '<i class="fas fa-times"></i>'
-          : '<i class="fas fa-bars"></i>';
-      });
-
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-      });
-
-      // Image Slider
-      const slider = document.getElementById("imageSlider");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      const indicatorsContainer = document.getElementById("indicators");
-
-      // Replace these image URLs with your actual image URLs
-      const imageUrls = [
-        "https://ik.imagekit.io/referindia/School/STP.jpeg",
-        "https://ik.imagekit.io/referindia/School/STP2.jpeg",
-        "https://ik.imagekit.io/referindia/School/STP3.jpeg",
-        "https://ik.imagekit.io/referindia/School/STP4.jpeg",
-        "/images/act1.jpeg",
-        "/images/act2.jpeg",
-        "/images/act3.jpeg",
-        "/images/act4.jpeg",
-        "/images/act5.jpeg",
-        "/images/act6.jpeg",
-        "/images/act7.jpeg",
-      ];
-
-      let currentSlide = 0;
-
-      // Create slides and indicators
-      imageUrls.forEach((url, index) => {
-        // Create slide
-        console.log(url);
-
-        const slide = document.createElement("div");
-        slide.className = "slide";
-        slide.style.backgroundImage = `url('${url}')`;
-        slider.appendChild(slide);
-
-        // Create indicator
-        const indicator = document.createElement("div");
-        indicator.className = "indicator";
-        if (index === 0) indicator.classList.add("active");
-        indicator.addEventListener("click", () => goToSlide(index));
-        indicatorsContainer.appendChild(indicator);
-      });
-
-      // Function to update slider position
-      function updateSlider() {
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update indicators
-        document.querySelectorAll(".indicator").forEach((indicator, index) => {
-          if (index === currentSlide) {
-            indicator.classList.add("active");
-          } else {
-            indicator.classList.remove("active");
-          }
-        });
-      }
-
-      // Function to go to specific slide
-      function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateSlider();
-      }
-
-      // Next slide
-      nextBtn.addEventListener("click", () => {
-        currentSlide = (currentSlide + 1) % imageUrls.length;
-        updateSlider();
-      });
-
-      // Previous slide
-      prevBtn.addEventListener("click", () => {
-        currentSlide = (currentSlide - 1 + imageUrls.length) % imageUrls.length;
-        updateSlider();
-      });
-
-      // Auto slide every 5 seconds
-      setInterval(() => {
-        currentSlide = (currentSlide + 1) % imageUrls.length;
-        updateSlider();
-      }, 5000);
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          if (targetId === "#") return;
-
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth",
-            });
-          }
-        });
-      });
-    </script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+    <!-- WhatsApp floating button -->
+    <a
+      href="https://wa.me/919999999999?text=Hello%20there"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20.5 3.5A11.9 11.9 0 0012 .5 11.9 11.9 0 013.5 3.5 11.9 11.9 0 00.5 12c0 2.1.6 4.1 1.8 5.9L.5 23.5l5.8-1.6A11.9 11.9 0 0012 23.5c6.6 0 12-5.4 12-12a11.9 11.9 0 00-3.5-8zM12 21c-1.6 0-3.2-.4-4.6-1.2l-.3-.2-3.4.9.9-3.2-.2-.3A8.8 8.8 0 013.2 12 8.8 8.8 0 0112 3.2 8.8 8.8 0 0120.8 12 8.8 8.8 0 0112 21zm4.6-6.1c-.2-.1-1.2-.6-1.4-.6-.2 0-.4 0-.6.1-.2.1-.5.1-.8-.1-.3-.2-1-1.1-1.2-1.4-.2-.3 0-.4.1-.6.1-.2.2-.5.1-.8-.1-.3-.6-1-1-1.3-.3-.3-.6-.4-1-.4-.3 0-.7 0-1 .1-.4.1-.7.3-.9.6-.2.3-.8.9-.8 2.2 0 1.3.8 2.6 1 2.8.3.2 2 .3 3.4.2 1.4-.1 2.1-.5 2.4-.9.3-.3.3-.6.2-.8-.1-.2-.3-.3-.5-.4z"/>
+      </svg>
+    </a>
   </body>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>

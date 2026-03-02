@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body>
+
+
+    
+<header class="bg-[#1a5276] text-white w-full z-50 shadow-md relative">
+  <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+
+    <!-- Logo + Title -->
+    <div class="flex items-center gap-4">
+     <a href="/index.html"> <img
+        src="https://ik.imagekit.io/referindia/sant_tukaram.jpeg"
+        class="h-16 rounded-lg"
+      /></a>
+      <div>
+        <h1 class="text-xl font-semibold text-white">Sant Tukaram Pradnyavardhini</h1>
+        <p class="text-sm opacity-80">
+          Formerly Sant Tukaram Salvation Mission, Malad
+        </p>
+      </div>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden lg:flex gap-8 font-medium items-center">
+
+      <a href="/index.html" class="hover:text-orange-400">Home</a>
+      <a href="#founder" class="hover:text-orange-400">Founder</a>
+      <a href="#about" class="hover:text-orange-400">About</a>
+
+      <!-- Education Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-orange-400">
+          Education <i class="ri-arrow-down-s-line"></i>
+        </button>
+
+        <!-- Dropdown -->
+        <div class="absolute left-0 w-56 bg-white text-black rounded shadow-lg hidden group-hover:block">
+
+          <a href="/english.html" class="block px-4 py-2 hover:bg-gray-100">
+            English
+          </a>
+
+          <!-- Marathi Submenu -->
+          <div class="relative group/marathi">
+            <div class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              Marathi <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+            <div class="absolute top-0 left-full w-56 bg-white rounded shadow-lg hidden group-hover/marathi:block">
+              <a href="/malad.html" class="block px-4 py-2 hover:bg-gray-100">
+                Malad Premises
+              </a>
+              <a href="/virar.html" class="block px-4 py-2 hover:bg-gray-100">
+                Virar Premises
+              </a>
+              <a href="/borivali.html" class="block px-4 py-2 hover:bg-gray-100">
+                Borivali Premises
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="#objective" class="hover:text-orange-400">Objectives</a>
+      <a href="#contact" class="hover:text-orange-400">Contact</a>
+
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="lg:hidden text-3xl">
+      <i class="ri-menu-line"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden flex flex-col bg-[#154360] px-5 pb-4 space-y-3 font-medium">
+
+    <a href="/index.html">Home</a>
+    <a href="#founder">Founder</a>
+    <a href="#about">About</a>
+
+    <!-- Mobile Education -->
+    <div>
+      <button id="edu-btn" class="flex justify-between w-full items-center">
+        Education <i class="ri-arrow-down-s-line"></i>
+      </button>
+
+      <div id="edu-menu" class="hidden lg:hidden flex flex-col pl-4 mt-2 space-y-2">
+        <a href="/english.html">English</a>
+
+        <!-- Marathi -->
+        <div>
+          <button id="marathi-btn" class="flex justify-between w-full items-center">
+            Marathi <i class="ri-arrow-down-s-line"></i>
+          </button>
+
+          <div id="marathi-menu" class="hidden flex flex-col pl-4 mt-2 space-y-2">
+            <a href="/malad.html">Malad Premises</a>
+            <a href="/virar.html">Virar Premises</a>
+            <a href="/borivali.html">Borivali Premises</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <a href="#objective">Objectives</a>
+    <a href="#contact">Contact</a>
+
+  </div>
+</header>
+
+
+
+
+
+   <!-- ========== MALAD (LIBERTY GARDEN) ========== -->
+    <div class="section-title">📌 Malad West — Liberty Garden Road </div>
+    <div class="school-cluster">
+        <!-- 1. Dayanand Bal Mandir (Marathi, unaided) -->
+        <div class="school-card">
+            <div class="school-name">Dayanand Bal Mandir</div>
+            <span class="medium-badge">Marathi Medium · Unaided</span>
+            <div class="address-block">📍 Liberty Garden Road No 1, Malad West, Mumbai 400064</div>
+            <div class="detail-row"><span class="detail-label">U-DISE</span><span class="detail-value">— not provided —</span></div>
+            <div class="detail-row"><span class="detail-label">Recognition</span><span class="detail-value">—</span></div>
+            <div class="detail-row"><span class="detail-label">Students 2024-25</span><span class="detail-value"><strong>16</strong></span></div>
+    
+        </div>
+
+        <!-- 2. Dayanand Primary School (Marathi, aided) -->
+        <div class="school-card">
+            <div class="school-name">Dayanand Primary School</div>
+            <span class="medium-badge">Marathi Medium · Aided</span>
+            <div class="address-block">📍 Liberty Garden Road No 1, Malad West, Mumbai 400064</div>
+            <div class="detail-row"><span class="detail-label">U-DISE</span><span class="detail-value">27220200116</span></div>
+            <div class="detail-row"><span class="detail-label">Recognition</span><span class="detail-value">SAS/9 OD 6838</span></div>
+            <div class="detail-row"><span class="detail-label">Students 2024-25</span><span class="detail-value"><strong>88</strong></span></div>
+         
+        </div>
+
+        <!-- 3. D. A. V. High School (Marathi, aided) -->
+        <div class="school-card">
+            <div class="school-name">D. A. V. High School</div>
+            <span class="medium-badge">Marathi Medium · Aided</span>
+            <div class="address-block">📍 Liberty Garden Road No 1, Malad West, Mumbai 400064</div>
+            <div class="detail-row"><span class="detail-label">U-DISE</span><span class="detail-value">27230600101</span></div>
+            <div class="detail-row"><span class="detail-label">Recognition</span><span class="detail-value">B-4-T Thane dated 29.1.1954</span></div>
+            <div class="detail-row"><span class="detail-label">Students 2024-25</span><span class="detail-value"><strong>164</strong></span></div>
+    
+        </div>
+    </div>
+
+
+
+
+     <!-- Footer Section-->
+    <footer class="bg-[#1a5276] text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 text-center md:text-left"
+        >
+          <!-- Column 1 -->
+          <div class="text-center">
+            <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
+              Sant Tukaram Pradnyavardhini
+            </h4>
+            <p class="text-gray-300 leading-7">
+              Formerly Sant Tukaram Salvation Mission, Malad
+            </p>
+            <p class="text-gray-300 mt-4 leading-7">
+              A Public Charitable Trust established in 1950
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="text-center">
+            <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
+              Our Mission
+            </h4>
+            <p class="text-gray-300 leading-7 md:max-w-sm">
+              To promote Universal Brotherhood through propagation of Vedic
+              Principles and education for all.
+            </p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="text-center">
+            <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
+              Quick Links
+            </h4>
+            <ul class="space-y-3 text-gray-300">
+              <li>
+                <a href="#home" class="hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#founder"
+                  class="hover:text-white transition duration-300"
+                  >Founder</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-white transition duration-300"
+                  >About Us</a
+                >
+              </li>
+                 <li>
+                <a
+                  href="#education"
+                  class="hover:text-white transition duration-300"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#objective"
+                  class="hover:text-white transition duration-300"
+                  >Objectives</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div
+          class="border-t border-white/20 mt-14 pt-6 text-center font-semibold"
+        >
+          <p class="text-gray-300 text-sm">
+            &copy; 2026 Sant Tukaram Pradnyavardhini. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- WhatsApp floating button -->
+    <a
+      href="https://wa.me/919930058877?text=Hello%20there"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20.5 3.5A11.9 11.9 0 0012 .5 11.9 11.9 0 013.5 3.5 11.9 11.9 0 00.5 12c0 2.1.6 4.1 1.8 5.9L.5 23.5l5.8-1.6A11.9 11.9 0 0012 23.5c6.6 0 12-5.4 12-12a11.9 11.9 0 00-3.5-8zM12 21c-1.6 0-3.2-.4-4.6-1.2l-.3-.2-3.4.9.9-3.2-.2-.3A8.8 8.8 0 013.2 12 8.8 8.8 0 0112 3.2 8.8 8.8 0 0120.8 12 8.8 8.8 0 0112 21zm4.6-6.1c-.2-.1-1.2-.6-1.4-.6-.2 0-.4 0-.6.1-.2.1-.5.1-.8-.1-.3-.2-1-1.1-1.2-1.4-.2-.3 0-.4.1-.6.1-.2.2-.5.1-.8-.1-.3-.6-1-1-1.3-.3-.3-.6-.4-1-.4-.3 0-.7 0-1 .1-.4.1-.7.3-.9.6-.2.3-.8.9-.8 2.2 0 1.3.8 2.6 1 2.8.3.2 2 .3 3.4.2 1.4-.1 2.1-.5 2.4-.9.3-.3.3-.6.2-.8-.1-.2-.3-.3-.5-.4z"/>
+      </svg>
+    </a>
+
+
+
+</body>
+<script src="./script.js"></script>
+</html>

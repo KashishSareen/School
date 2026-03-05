@@ -26,6 +26,7 @@
             background: #f0f4f8;
             /* padding: 2rem 1.5rem; */
             color: #1e2b3c;
+            overflow-x: hidden;
         }
         .main-container {
             max-width: 1300px;

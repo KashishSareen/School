@@ -6,129 +6,153 @@
     <title>Sant Tukaram Pradnyavardhini</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  
+
   <!-- Swiper CSS -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
   <body class="bg-gray-100 text-gray-800">
     <!-- Header -->
-  <!-- Add Remix Icon CDN in <head> if not added -->
-<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <!-- Add Remix Icon CDN in <head> if not added -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-<header class="bg-[#1a5276] text-white w-full z-50 shadow-md relative">
-  <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+    <header class="bg-[#1a5276] text-white w-full z-50 shadow-md relative">
+      <div
+        class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center"
+      >
+        <!-- Logo + Title -->
+        <div class="flex items-center gap-4">
+          <a href="/index.html">
+            <img
+              src="https://ik.imagekit.io/referindia/sant_tukaram.jpeg"
+              class="h-16 rounded-lg"
+          /></a>
+          <div>
+            <h1 class="text-xl text-white font-semibold">
+              Sant Tukaram Pradnyavardhini
+            </h1>
+            <p class="text-sm opacity-80">
+              Formerly Sant Tukaram Salvation Mission, Malad
+            </p>
+          </div>
+        </div>
 
-    <!-- Logo + Title -->
-    <div class="flex items-center gap-4">
-     <a href="/index.html"> <img
-        src="https://ik.imagekit.io/referindia/sant_tukaram.jpeg"
-        class="h-16 rounded-lg"
-      /></a>
-      <div>
-        <h1 class="text-xl text-white font-semibold">Sant Tukaram Pradnyavardhini</h1>
-        <p class="text-sm opacity-80">
-          Formerly Sant Tukaram Salvation Mission, Malad
-        </p>
-      </div>
-    </div>
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex gap-8 font-medium items-center">
+          <a href="/index.html" class="hover:text-orange-400">Home</a>
+          <a href="#founder" class="hover:text-orange-400">Founder</a>
+          <a href="#about" class="hover:text-orange-400">About</a>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden lg:flex gap-8 font-medium items-center">
+          <!-- Education Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 hover:text-orange-400">
+              Education <i class="ri-arrow-down-s-line"></i>
+            </button>
 
-      <a href="/index.html" class="hover:text-orange-400">Home</a>
-      <a href="#founder" class="hover:text-orange-400">Founder</a>
-      <a href="#about" class="hover:text-orange-400">About</a>
-
-      <!-- Education Dropdown -->
-      <div class="relative group">
-        <button class="flex items-center gap-1 hover:text-orange-400">
-          Education <i class="ri-arrow-down-s-line"></i>
-        </button>
-
-        <!-- Dropdown -->
-        <div class="absolute left-0  w-56 bg-white text-black rounded shadow-lg hidden group-hover:block">
-
-          <a href="/english.html" class="block px-4 py-2 hover:bg-gray-100">
-            English
-          </a>
-
-          <!-- Marathi Submenu -->
-          <div class="relative group/marathi">
-            <div class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              Marathi <i class="ri-arrow-right-s-line"></i>
-            </div>
-
-            <div class="absolute top-0 left-full w-56 bg-white rounded shadow-lg hidden group-hover/marathi:block">
-              <a href="/malad.html" class="block px-4 py-2 hover:bg-gray-100">
-                Malad Premises
+            <!-- Dropdown -->
+            <div
+              class="absolute left-0 w-56 bg-white text-black rounded shadow-lg hidden group-hover:block"
+            >
+              <a href="/english.html" class="block px-4 py-2 hover:bg-gray-100">
+                English
               </a>
-              <a href="/virar.html" class="block px-4 py-2 hover:bg-gray-100">
-                Virar Premises
-              </a>
-              <a href="/borivali.html" class="block px-4 py-2 hover:bg-gray-100">
-                Borivali Premises
-              </a>
+
+              <!-- Marathi Submenu -->
+              <div class="relative group/marathi">
+                <div
+                  class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                >
+                  Marathi <i class="ri-arrow-right-s-line"></i>
+                </div>
+
+                <div
+                  class="absolute top-0 left-full w-56 bg-white rounded shadow-lg hidden group-hover/marathi:block"
+                >
+                  <a
+                    href="/malad.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Malad Premises
+                  </a>
+                  <a
+                    href="/virar.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Virar Premises
+                  </a>
+                  <a
+                    href="/borivali.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Borivali Premises
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-        </div>
+          <a href="#objective" class="hover:text-orange-400">Objectives</a>
+          <a href="#contact" class="hover:text-orange-400">Contact</a>
+        </nav>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="lg:hidden text-3xl">
+          <i class="ri-menu-line"></i>
+        </button>
       </div>
 
-      <a href="#objective" class="hover:text-orange-400">Objectives</a>
-      <a href="#contact" class="hover:text-orange-400">Contact</a>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden flex flex-col bg-[#154360] px-5 pb-4 space-y-3 font-medium"
+      >
+        <a href="/index.html">Home</a>
+        <a href="#founder">Founder</a>
+        <a href="#about">About</a>
 
-    </nav>
-
-    <!-- Hamburger Button -->
-    <button id="menu-btn" class="lg:hidden text-3xl">
-      <i class="ri-menu-line"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden flex flex-col bg-[#154360] px-5 pb-4 space-y-3 font-medium">
-
-    <a href="/index.html">Home</a>
-    <a href="#founder">Founder</a>
-    <a href="#about">About</a>
-
-    <!-- Mobile Education -->
-    <div>
-      <button id="edu-btn" class="flex justify-between w-full items-center">
-        Education <i class="ri-arrow-down-s-line"></i>
-      </button>
-
-      <div id="edu-menu" class="hidden flex flex-col pl-4 mt-2 space-y-2">
-        <a href="/english.html">English</a>
-
-        <!-- Marathi -->
+        <!-- Mobile Education -->
         <div>
-          <button id="marathi-btn" class="flex justify-between w-full items-center">
-            Marathi <i class="ri-arrow-down-s-line"></i>
+          <button id="edu-btn" class="flex justify-between w-full items-center">
+            Education <i class="ri-arrow-down-s-line"></i>
           </button>
 
-          <div id="marathi-menu" class="hidden flex flex-col pl-4 mt-2 space-y-2">
-            <a href="/malad.html">Malad Premises</a>
-            <a href="/virar.html">Virar Premises</a>
-            <a href="/borivali.html">Borivali Premises</a>
+          <div id="edu-menu" class="hidden flex flex-col pl-4 mt-2 space-y-2">
+            <a href="/english.html">English</a>
+
+            <!-- Marathi -->
+            <div>
+              <button
+                id="marathi-btn"
+                class="flex justify-between w-full items-center"
+              >
+                Marathi <i class="ri-arrow-down-s-line"></i>
+              </button>
+
+              <div
+                id="marathi-menu"
+                class="hidden flex flex-col pl-4 mt-2 space-y-2"
+              >
+                <a href="/malad.html">Malad Premises</a>
+                <a href="/virar.html">Virar Premises</a>
+                <a href="/borivali.html">Borivali Premises</a>
+              </div>
+            </div>
           </div>
         </div>
 
+        <a href="#objective">Objectives</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
-
-    <a href="#objective">Objectives</a>
-    <a href="#contact">Contact</a>
-
-  </div>
-</header>
-
-
-
+    </header>
 
     <!-- Hero Section -->
     <!-- <section
@@ -158,43 +182,42 @@
         </a>
       </div>
     </section> -->
-<section
-  id="home"
-  class="relative pt-32 min-h-screen flex items-center justify-center text-center text-white overflow-hidden"
->
-  <!-- Background Slides -->
-  <div class="absolute inset-0 z-0">
-    <div class="slide bg1"></div>
-    <div class="slide bg2"></div>
-    <div class="slide bg3"></div>
-    <div class="slide bg4"></div>
-    <div class="slide bg5"></div>
-    
-  </div>
-
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-[rgba(26,82,118,0.85)] z-10"></div>
-
-  <!-- Content -->
-  <div class="relative z-20 max-w-3xl mx-auto px-5">
-    <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
-      Promoting Universal Brotherhood Through Vedic Principles
-    </h2>
-
-    <p class="text-lg mb-8 opacity-90">
-      Established on 20th April 1950, Sant Tukaram Pradnyavardhini is a
-      Public Charitable Trust dedicated to education, cultural preservation,
-      and spiritual growth.
-    </p>
-
-    <a
-      href="#founder"
-      class="inline-block bg-orange-600 hover:bg-transparent hover:border-orange-600 border-2 border-orange-600 px-8 py-3 rounded-full uppercase tracking-wider font-semibold transition"
+    <section
+      id="home"
+      class="relative pt-32 min-h-screen flex items-center justify-center text-center text-white overflow-hidden"
     >
-      Learn About Our Founder
-    </a>
-  </div>
-</section>
+      <!-- Background Slides -->
+      <div class="absolute inset-0 z-0">
+        <div class="slide bg1"></div>
+        <div class="slide bg2"></div>
+        <div class="slide bg3"></div>
+        <div class="slide bg4"></div>
+        <div class="slide bg5"></div>
+      </div>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-[rgba(26,83,118,0.5)] z-10"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 max-w-3xl mx-auto px-5">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+          Promoting Universal Brotherhood Through Vedic Principles
+        </h2>
+
+        <p class="text-lg mb-8 opacity-90">
+          Established on 20th April 1950, Sant Tukaram Pradnyavardhini is a
+          Public Charitable Trust dedicated to education, cultural preservation,
+          and spiritual growth.
+        </p>
+
+        <a
+          href="#founder"
+          class="inline-block bg-orange-600 hover:bg-transparent hover:border-orange-600 border-2 border-orange-600 px-8 py-3 rounded-full uppercase tracking-wider font-semibold transition"
+        >
+          Learn About Our Founder
+        </a>
+      </div>
+    </section>
     <!-- Founder Section -->
     <section id="founder" class="bg-white py-16 w-full">
       <!-- Title -->
@@ -203,7 +226,6 @@
           class="text-3xl md:text-4xl font-bold text-[#1a5276] text-center pb-4"
         >
           Our Founder
-          
         </h2>
       </div>
 
@@ -281,102 +303,121 @@
     </section>
 
     <!-- Activities Section -->
-<section
-  id="activity"
-  class="w-full flex flex-col items-center py-16 lg:py-0"
->
-  <!-- Title -->
-  <div class="w-full py-6 ">
-    <h2
-      class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a5276] text-center"
+    <section
+      id="activity"
+      class="w-full flex flex-col items-center py-16 lg:py-0"
     >
-      Our Activities & Initiatives
-    </h2>
-  </div>
-
-  <!-- Swiper Container -->
-  <div class="w-full flex justify-center px-4 py-8">
-    <div class="w-[90%] md:w-[75%] lg:w-[60%]">
-      
-      <div class="swiper mySwiper ">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src="https://ik.imagekit.io/referindia/School/STP4.jpeg"
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-
-          <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src="https://ik.imagekit.io/referindia/School/STP.jpeg"
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-
-          <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src="https://ik.imagekit.io/referindia/School/STP2.jpeg"
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-           <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='https://ik.imagekit.io/referindia/School/STP3.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act1.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act2.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act3.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act4.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-            <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act5.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-              <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act6.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-              <div class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]">
-            <img
-              src='./images/act7.jpeg'
-              class="max-h-full max-w-full object-contain rounded-xl"
-            />
-          </div>
-        </div>
-
-        <div class="swiper-pagination"></div>
+      <!-- Title -->
+      <div class="w-full py-6">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a5276] text-center"
+        >
+          Our Activities & Initiatives
+        </h2>
       </div>
 
-    </div>
-  </div>
-</section>
+      <!-- Swiper Container -->
+      <div class="w-full flex justify-center lg:px-4 py-8">
+        <div class="w-full md:w-[75%] lg:w-[60%]">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="https://ik.imagekit.io/referindia/School/STP4.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="https://ik.imagekit.io/referindia/School/STP.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="https://ik.imagekit.io/referindia/School/STP2.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="https://ik.imagekit.io/referindia/School/STP3.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act1.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act2.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act3.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act4.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act5.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act6.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
+              >
+                <img
+                  src="./images/act7.jpeg"
+                  class="max-h-full max-w-full object-contain rounded-xl"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- About Section -->
     <section
       id="about"
@@ -384,7 +425,7 @@
     >
       <div class="w-full max-w-6xl mx-auto">
         <!-- Heading -->
-        <div class="text-center mb-8 ">
+        <div class="text-center mb-8">
           <h2 class="text-4xl font-bold text-[#1a5276]">About Our Trust</h2>
         </div>
 
@@ -696,7 +737,7 @@
                   >About Us</a
                 >
               </li>
-                 <li>
+              <li>
                 <a
                   href="#education"
                   class="hover:text-white transition duration-300"
@@ -732,16 +773,16 @@
       </div>
     </footer>
     <!-- WhatsApp floating button -->
-   <!-- Replace the WhatsApp button SVG with Remix icon -->
-<a
-  href="https://wa.me/919930058877?text=Hello%20there"
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Chat on WhatsApp"
->
-  <i class="ri-whatsapp-line"></i>
-</a>
+    <!-- Replace the WhatsApp button SVG with Remix icon -->
+    <a
+      href="https://wa.me/919930058877?text=Hello%20there"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="ri-whatsapp-line"></i>
+    </a>
   </body>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -785,5 +826,5 @@
   });
 </script> -->
 
-<script src="./script.js"></script>
+  <script src="./script.js"></script>
 </html>

@@ -22,12 +22,73 @@
     }
     .whatsapp-float:hover { transform: translateY(-4px); }
     .whatsapp-float svg { width: 28px; height: 28px; color: #ffffff; fill: currentColor; }
-        body {
+       
+    
+    body {
             background: #f0f4f8;
             /* padding: 2rem 1.5rem; */
             color: #1e2b3c;
             overflow-x: hidden;
         }
+    .whatsapp-float svg { 
+        width: 28px; 
+        height: 28px; 
+        color: #ffffff; 
+        fill: currentColor; 
+    }
+    
+    .whatsapp-float i {
+        font-size: 28px;
+        color: #ffffff;
+    }
+
+    /* Mobile responsiveness - remove overflow and center content */
+    @media (max-width: 768px) {
+        .school-cluster {
+            grid-template-columns: 1fr;
+            padding: 1.5rem;
+            gap: 1.5rem;
+            overflow-x: hidden;
+        }
+
+        .school-card {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .address-block {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .detail-row {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .detail-label {
+            width: auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        body {
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+        }
+    }
         .main-container {
             max-width: 1300px;
             margin: 0 auto;

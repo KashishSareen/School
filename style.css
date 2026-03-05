@@ -54,7 +54,7 @@
         .school-card {
             width: 100%;
             margin: 0;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem;
             overflow-x: hidden;
         }
 
@@ -80,11 +80,7 @@
             width: auto;
         }
 
-        h1 {
-            font-size: 1.8rem;
-            text-align: center;
-        }
-
+       
         body {
             overflow-x: hidden;
             padding: 0;

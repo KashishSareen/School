@@ -399,3 +399,17 @@
     40% { opacity: 0; }
     100% { opacity: 0; }
   }
+@keyframes bgChange {
+  0%, 100% {
+    background-color: white;
+    color: #f95e5e; /* red text */
+  }
+  50% {
+    background-color: #f17474; /* red bg */
+    color: white;
+  }
+}
+
+.animate-bg {
+  animation: bgChange 1s infinite;
+}

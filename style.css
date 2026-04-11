@@ -370,25 +370,25 @@
   }
 
   .bg1 {
-    background-image: url('/images/school1.jpeg');
+    background-image: url('/images/school-campus-aerial-view.jpeg');
     animation-delay: 0s;
   }
 
   .bg2 {
-    background-image: url('/images/school2.jpeg');
+    background-image: url('/images/school-campus-aerial-view2.jpeg');
     animation-delay: 1s;
   }
 
   .bg3 {
-    background-image: url('/images/school3.jpeg');
+    background-image: url('/images/school-campus-aerial-view3.jpeg');
     animation-delay: 2s;
   }
   .bg4 {
-    background-image: url('/images/school4.jpeg');
+    background-image: url('/images/school-front-gate-view.jpeg');
     animation-delay: 3s;
   }
   .bg5 {
-    background-image: url('/images/school5.jpeg');
+    background-image: url('/images/school-campus-aerial-view4.jpeg');
     animation-delay: 2s;
   }
 

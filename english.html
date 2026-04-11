@@ -263,6 +263,15 @@
         once: false,
         mirror: false,
     });
+
+    // Close mobile menu on scroll
+window.addEventListener("scroll", () => {
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+    mobileMenu.classList.add("hidden");
+  }
+});
 </script>
 </body>
 </html>

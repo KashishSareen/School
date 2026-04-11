@@ -148,14 +148,7 @@
                 <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">Registration</span>
                 <span class="flex-1 text-[#103450]">272201001004</span>
             </div>
-            <!-- <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
-                <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">Recognition</span>
-                <span class="flex-1 text-[#103450]">—</span>
-            </div>
-            <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
-                <span class="w-full md:w-28 font-semibold text-[#1f4973] mb-1 md:mb-0">Students till date</span>
-                <span class="flex-1 text-[#103450]">—</span>
-            </div> -->
+         
         </div>
 
         <!-- Primary -->
@@ -173,10 +166,7 @@
                 <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">U-DISE</span>
                 <span class="flex-1 text-[#103450]">27220100175</span>
             </div>
-            <!-- <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
-                <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">Recognition</span>
-                <span class="flex-1 text-[#103450]">—</span>
-            </div> -->
+          
             <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
                 <span class="w-full md:w-28 font-semibold text-[#1f4973] mb-1 md:mb-0">Students till date</span>
                 <span class="flex-1 text-[#103450]"><strong>1440</strong></span>
@@ -198,10 +188,7 @@
                 <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">U-DISE</span>
                 <span class="flex-1 text-[#103450]">27230700262</span>
             </div>
-            <!-- <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
-                <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">Recognition</span>
-                <span class="flex-1 text-[#103450]">—</span>
-            </div> -->
+           
             <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
                 <span class="w-full md:w-28 font-semibold text-[#1f4973] mb-1 md:mb-0">Students till date</span>
                 <span class="flex-1 text-[#103450]"><strong>2336</strong></span>
@@ -271,6 +258,15 @@
         once: false,
         mirror: false,
     });
+
+    // Close mobile menu on scroll
+window.addEventListener("scroll", function () {
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+    mobileMenu.classList.add("hidden");
+  }
+});
 
 </script>
 </body>

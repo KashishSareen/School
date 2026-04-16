@@ -23,6 +23,19 @@
     html {
       overflow-x: hidden;
     }
+       .trustee-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trustee-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.35);
+        }
+        /* Ensure background images cover properly */
+        .card-bg {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
   </style>
   <body class="bg-gray-100 text-gray-800">
     <!-- Header -->
@@ -38,7 +51,7 @@
         >
           <a href="/index.html">
             <img
-              src="https://ik.imagekit.io/referindia/sant_tukaram.jpeg"
+              src="./images/sant_tukaram_logo.webp"
               class="h-16 rounded-lg"
           /></a>
           <div>
@@ -57,6 +70,7 @@
           data-aos="fade-left"
           data-aos-duration="800"
         >
+        <!-- <img src="/images/75logo.jpeg" alt="75 Logo" class="w-16 h-16 rounded-full"> -->
           <a href="/index.html" class="hover:text-orange-400">Home</a>
           <a href="#founder" class="hover:text-orange-400">Founder</a>
           <a href="#about" class="hover:text-orange-400">About</a>
@@ -183,7 +197,16 @@
         <div class="slide bg4"></div>
         <div class="slide bg5"></div>
       </div>
-      <div class="absolute inset-0 bg-[rgba(26,83,118,0.5)] z-10"></div>
+      <div class="absolute inset-0 bg-[rgba(26,83,118,0.5)] z-10 py-5  ">
+         <img
+          src="/images/75logo.jpeg"
+          alt="75 Logo"
+          class=" ml-10   w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[200px] lg:h-[200px] object-cover
+           rounded-full shadow-lg"
+          data-aos="fade-down"
+          data-aos-duration="800"
+        />
+      </div>
 
       <!-- Content -->
       <div
@@ -191,13 +214,7 @@
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <img
-          src="/images/75logo.jpeg"
-          alt="75 Logo"
-          class="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[200px] lg:h-[200px] object-cover rounded-full shadow-lg"
-          data-aos="fade-down"
-          data-aos-duration="800"
-        />
+       
         <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
           Promoting Universal Brotherhood Through Vedic Principles
         </h2>
@@ -667,6 +684,176 @@
         </div>
       </div>
     </section>
+
+    <!-- trustee section -->
+
+      <section class="relative py-20 px-4 md:px-8">
+        <!-- Background layer with requested color: bg-[rgba(26,83,118,0.5)] -->
+        <div class="absolute inset-0 bg-[rgba(26,83,118,0.5)] -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-14 md:mb-16" data-aos="zoom-in-down">
+                <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-md">
+                    Our <span class="border-b-4 border-white pb-1">Trustees</span>
+                </h2>
+                <p class="text-white/80 text-base md:text-lg mt-4 max-w-2xl mx-auto">
+                    Dedicated leaders shaping our vision with integrity and excellence
+                </p>
+                <!-- <div class="w-20 h-1 bg-white mx-auto mt-6 rounded-full opacity-70"></div> -->
+            </div>
+
+            <!-- Trustee Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7" data-aos="fade-up"
+     data-aos-duration="2000">
+
+                 <!-- Card 1 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/dileepWakankar.jpeg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Dr. Dileep Wakankar</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Chairman</span>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/sanjayJoshi.jpeg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Sanjay Joshi</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Secretary</span>
+                        </div>
+                     
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/mahesh_mestry.jpg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Mahesh Mestry</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Joint Secretary</span>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                 <!-- Card 4 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/bhushanPiathankar.jpeg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Bhushan Piathankar</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Treasurer</span>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/samir_bhatkar.jpg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Samir Bhatkar</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <!-- <p class="text-white/80 text-sm mt-3 leading-relaxed">Education & economic development</p> -->
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/manish_kajale.jpg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Manish Kajale</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <!-- <p class="text-white/80 text-sm mt-3 leading-relaxed">Financial stewardship & impact investing</p> -->
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/veena_kelkar.jpg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Veena Kelkar</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <!-- <p class="text-white/80 text-sm mt-3 leading-relaxed">Governance & legal compliance</p> -->
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/sharad_sathe.jpg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Sharad Sathe</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <!-- <p class="text-white/80 text-sm mt-3 leading-relaxed">Community outreach & innovation</p> -->
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('./images/vasudev_arekar.jpg');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Vasudev Arekar</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <!-- <p class="text-white/80 text-sm mt-3 leading-relaxed">Technology & digital transformation</p> -->
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <!-- <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=600&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Linda Grant</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <p class="text-white/80 text-sm mt-3 leading-relaxed">Healthcare & social welfare</p>
+                    </div>
+                </div> -->
+
+                <!-- Card 8 -->
+                <!-- <div class="trustee-card rounded-xl overflow-hidden shadow-lg relative h-96">
+                    <div class="card-bg absolute inset-0 w-full h-full" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=600&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+                    <div class="relative z-10 flex flex-col justify-end h-full p-5">
+                        <h3 class="text-white text-2xl font-bold drop-shadow-lg">Robert Hayes</h3>
+                        <div class="mt-2">
+                            <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Member</span>
+                        </div>
+                        <p class="text-white/80 text-sm mt-3 leading-relaxed">Infrastructure & sustainability</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Objectives Section -->
     <section id="objective" class="w-full bg-[#f3f4f6] pt-15">

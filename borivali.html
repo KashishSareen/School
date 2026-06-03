@@ -38,13 +38,13 @@
     <nav class="hidden lg:flex gap-8 font-medium items-center" data-aos="fade-left" data-aos-duration="800">
 
       <a href="/index.html" class="hover:text-orange-400">Home</a>
-      <a href="#founder" class="hover:text-orange-400">Founder</a>
-      <a href="#about" class="hover:text-orange-400">About</a>
+      <a href="./index.html#founder" class="hover:text-orange-400">Founder</a>
+      <a href="./index.html#about" class="hover:text-orange-400">About</a>
 
       <!-- Education Dropdown -->
       <div class="relative group">
         <button class="flex items-center gap-1 hover:text-orange-400">
-          Education <i class="ri-arrow-down-s-line"></i>
+          Schools <i class="ri-arrow-down-s-line"></i>
         </button>
 
         <!-- Dropdown -->
@@ -76,8 +76,8 @@
         </div>
       </div>
 
-      <a href="#objective" class="hover:text-orange-400">Objectives</a>
-      <a href="#contact" class="hover:text-orange-400">Contact</a>
+      <a href="./index.html#objective" class="hover:text-orange-400">Objectives</a>
+      <a href="./index.html#contact" class="hover:text-orange-400">Contact</a>
 
     </nav>
 
@@ -97,7 +97,7 @@
     <!-- Mobile Education -->
     <div>
       <button id="edu-btn" class="flex justify-between w-full items-center">
-        Education <i class="ri-arrow-down-s-line"></i>
+         Schools <i class="ri-arrow-down-s-line"></i>
       </button>
 
       <div id="edu-menu" class="hidden lg:hidden flex flex-col pl-4 mt-2 space-y-2">
@@ -128,7 +128,7 @@
 <!-- ========== BORIVALI — ANANDRAO PAWAR VIDYALAYA ========== -->
 <div class="max-w-7xl mx-auto px-4 md:px-6">
     <div class="text-2xl md:text-3xl font-medium my-8 md:my-12 mx-auto md:mx-0 bg-gradient-to-r from-[#e1edf9] to-transparent py-3 px-6 rounded-full w-fit text-center md:text-left" data-aos="fade-right" data-aos-duration="700">
-         Pre-primary, Primary & Secondary Schools — Borivali 
+         Pre-Primary, Primary & Secondary Schools — Borivali 
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 p-4 md:p-6 mb-12 md:mb-14">
@@ -146,7 +146,7 @@
             </div>
             <div class="flex flex-col md:flex-row flex-wrap my-2 text-base items-baseline">
                 <span class="w-full md:w-24 font-semibold text-[#1f4973] mb-1 md:mb-0">Registration</span>
-                <span class="flex-1 text-[#103450]">272201001004</span>
+                <span class="flex-1 text-[#103450]"> 272201001004</span>
             </div>
          
         </div>
@@ -226,15 +226,19 @@
 <!-- Footer Section-->
 <footer class="bg-[#1a5276] text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 text-center md:text-left">
+
             <!-- Column 1 -->
             <div class="text-center" data-aos="fade-up" data-aos-duration="600">
                 <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
                     Sant Tukaram Pradnyavardhini
                 </h4>
+
                 <p class="text-gray-300 leading-7">
                     Formerly Sant Tukaram Salvation Mission, Malad
                 </p>
+
                 <p class="text-gray-300 mt-4 leading-7">
                     A Public Charitable Trust established in 1950
                 </p>
@@ -245,30 +249,140 @@
                 <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
                     Our Mission
                 </h4>
-                <p class="text-gray-300 leading-7 md:max-w-sm">
+
+                <p class="text-gray-300 leading-7 md:max-w-sm mx-auto">
                     To promote Universal Brotherhood through propagation of Vedic Principles and education for all.
                 </p>
             </div>
 
             <!-- Column 3 -->
-            <div class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="text-center relative"
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="200">
+
                 <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
                     Quick Links
                 </h4>
+
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="./index.html" class="hover:text-white transition duration-300">Home</a></li>
-                    <li><a href="./index.html#founder" class="hover:text-white transition duration-300">Founder</a></li>
-                    <li><a href="./index.html#about" class="hover:text-white transition duration-300">About Us</a></li>
-                    <li><a href="#education" class="hover:text-white transition duration-300">Education</a></li>
-                    <li><a href="./index.html#objective" class="hover:text-white transition duration-300">Objectives</a></li>
-                    <li><a href="./index.html#contact" class="hover:text-white transition duration-300">Contact</a></li>
+
+                    <li>
+                        <a href="#home" class="hover:text-white transition duration-300">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#founder" class="hover:text-white transition duration-300">
+                            Founder
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-white transition duration-300">
+                            About Us
+                        </a>
+                    </li>
+
+                    <!-- Education Dropdown -->
+                    <li class="relative inline-block">
+
+                        <!-- Education Button -->
+                        <button
+                            id="education-btn"
+                            class="flex items-center justify-center md:justify-start gap-1 hover:text-white transition duration-300 mx-auto md:mx-0"
+                        >
+                             Schools
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+
+                        <!-- Main Dropdown -->
+                        <div
+                            id="education-menu"
+                            class="hidden absolute top-full left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 mt-2 w-56 bg-white text-black rounded shadow-lg z-50 text-left"
+                        >
+
+                            <!-- English -->
+                            <a
+                                href="/english.html"
+                                class="block px-4 py-2 hover:bg-gray-100"
+                            >
+                                English
+                            </a>
+
+                            <!-- Marathi -->
+                            <div class="relative">
+
+                                <!-- Marathi Button -->
+                                <button
+                                    id="marathi-btn-footer"
+                                    class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-100"
+                                >
+                                    Marathi
+
+                                    <!-- Desktop Arrow -->
+                                    <i class="ri-arrow-right-s-line hidden md:block"></i>
+
+                                    <!-- Mobile Arrow -->
+                                    <i class="ri-arrow-down-s-line md:hidden"></i>
+                                </button>
+
+                                <!-- Marathi Dropdown -->
+                                <div
+                                    id="marathi-menu-footer"
+                                    class="hidden md:absolute md:top-0 md:left-full md:w-56 w-full bg-white rounded shadow-lg relative"
+                                >
+
+                                    <a
+                                        href="/malad.html"
+                                        class="block px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Malad Premises
+                                    </a>
+
+                                    <a
+                                        href="/virar.html"
+                                        class="block px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Virar Premises
+                                    </a>
+
+                                    <a
+                                        href="/borivali.html"
+                                        class="block px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Borivali Premises
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#objective" class="hover:text-white transition duration-300">
+                            Objectives
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="hover:text-white transition duration-300">
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
 
+        <!-- Bottom -->
         <div class="border-t border-white/20 mt-14 pt-6 text-center font-semibold">
-            <p class="text-gray-300 text-sm">&copy; 2026 Sant Tukaram Pradnyavardhini. All Rights Reserved.</p>
+            <p class="text-gray-300 text-sm">
+                &copy; 2026 Sant Tukaram Pradnyavardhini. All Rights Reserved.
+            </p>
         </div>
+
     </div>
 </footer>
 
@@ -294,6 +408,36 @@ window.addEventListener("scroll", function () {
   }
 });
 
+</script>
+ <script>
+    // Education Toggle
+    const educationBtn = document.getElementById("education-btn");
+    const educationMenu = document.getElementById("education-menu");
+
+    educationBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        educationMenu.classList.toggle("hidden");
+    });
+
+    // Marathi Toggle
+    const marathiBtnFooter = document.getElementById("marathi-btn-footer");
+    const marathiMenuFooter = document.getElementById("marathi-menu-footer");
+
+    marathiBtnFooter.addEventListener("click", (e) => {
+        e.stopPropagation();
+        marathiMenuFooter.classList.toggle("hidden");
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener("click", (e) => {
+        if (
+            !educationBtn.contains(e.target) &&
+            !educationMenu.contains(e.target)
+        ) {
+            educationMenu.classList.add("hidden");
+            marathiMenuFooter.classList.add("hidden");
+        }
+    });
 </script>
 </body>
 </html>

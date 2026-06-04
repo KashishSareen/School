@@ -1,184 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sant Tukaram Pradnyavardhini</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sant Tukaram Pradnyavardhini</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+   <!-- <link rel="stylesheet" href="style.css" /> -->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-    body,
-    html {
-      overflow-x: hidden;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f3f3;
     }
-       .trustee-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .trustee-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.35);
-        }
-        /* Ensure background images cover properly */
-        .card-bg {
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
+
+    .heading-font {
+      font-family: 'Playfair Display', serif;
+    }
   </style>
-  <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
-    <header class="bg-[#1a5276] text-white w-full z-50 shadow-md relative">
-      <div
-        class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center"
-      >
-        <!-- Logo + Title -->
-        <div
-          class="flex items-center gap-4"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
-          <a href="/index.html">
-            <img
-              src="./images/sant_tukaram_logo.webp"
-              class="h-16 rounded-lg"
-          /></a>
-          <div>
-            <h1 class="text-xl text-white font-semibold">
-              Sant Tukaram Pradnyavardhini
-            </h1>
-            <p class="text-sm opacity-80">
-              Formerly Sant Tukaram Salvation Mission, Malad
-            </p>
-          </div>
-        </div>
+</head>
 
-        <!-- Desktop Menu -->
-        <nav
-          class="hidden lg:flex gap-8 font-medium items-center"
-          data-aos="fade-left"
-          data-aos-duration="800"
-        >
-        <!-- <img src="/images/75logo.jpeg" alt="75 Logo" class="w-16 h-16 rounded-full"> -->
-          <a href="/index.html" class="hover:text-orange-400">Home</a>
-          <a href="#founder" class="hover:text-orange-400">Founder</a>
-          <a href="#about" class="hover:text-orange-400">About</a>
+<body>
 
-          <!-- Education Dropdown -->
-          <div class="relative group">
-            <button class="flex items-center gap-1 hover:text-orange-400">
-              Schools <i class="ri-arrow-down-s-line"></i>
-            </button>
-            <div
-              class="absolute left-0 w-56 bg-white text-black rounded shadow-lg hidden group-hover:block"
-            >
-              <a href="/english.html" class="block px-4 py-2 hover:bg-gray-100">
-                English
-              </a>
-              <!-- Marathi Submenu -->
-              <div class="relative group/marathi">
-                <div
-                  class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                >
-                  Marathi <i class="ri-arrow-right-s-line"></i>
-                </div>
-                <div
-                  class="absolute top-0 left-full w-56 bg-white rounded shadow-lg hidden group-hover/marathi:block"
-                >
-                  <a
-                    href="/malad.html"
-                    class="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Malad Premises
-                  </a>
-                  <a
-                    href="/virar.html"
-                    class="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Virar Premises
-                  </a>
-                  <a
-                    href="/borivali.html"
-                    class="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Borivali Premises
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="#objective" class="hover:text-orange-400">Objectives</a>
-          <a href="#contact" class="hover:text-orange-400">Contact</a>
-        </nav>
+  <section class="min-h-screen flex items-center justify-center px-6 py-10 bg-[#f3f3f3]">
+    
+    <div class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        <!-- Hamburger Button -->
-        <button id="menu-btn" class="lg:hidden text-3xl">
-          <i class="ri-menu-line"></i>
-        </button>
-      </div>
+      <!-- LEFT SIDE -->
+      <div class="text-center">
 
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden lg:hidden flex flex-col bg-[#154360] px-5 pb-4 space-y-3 font-medium"
-      >
-        <a href="/index.html">Home</a>
-        <a href="#founder">Founder</a>
-        <a href="#about">About</a>
-        <div>
-          <button id="edu-btn" class="flex justify-between w-full items-center">
-             Schools <i class="ri-arrow-down-s-line"></i>
-          </button>
-          <div id="edu-menu" class="hidden flex flex-col pl-4 mt-2 space-y-2">
-            <a href="/english.html">English</a>
-            <div>
-              <button
-                id="marathi-btn"
-                class="flex justify-between w-full items-center"
-              >
-                Marathi <i class="ri-arrow-down-s-line"></i>
-              </button>
-              <div
-                id="marathi-menu"
-                class="hidden flex flex-col pl-4 mt-2 space-y-2"
-              >
-                <a href="/malad.html">Malad Premises</a>
-                <a href="/virar.html">Virar Premises</a>
-                <a href="/borivali.html">Borivali Premises</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#objective">Objectives</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </header>
+        <!-- Logo -->
+       <img
+  src="/images/sant_tukaram_index_logo.png"
+  alt="Bhavan Logo"
+  class="w-40 sm:w-44 md:w-52 mx-auto mb-6"
+/>
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="relative pt-32 min-h-screen flex items-center justify-center text-center text-white overflow-hidden"
-    >
-      <!-- Responsive Circle -->
-      <div
-        class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-20 flex lg:flex-col items-center gap-4"
+        <!-- Top Text -->
+        <h2 class="text-[20px] md:text-[30px] heading-font text-black leading-tight">
+          SANT TUKARAM PRADNYAVARDHINI
+        </h2>
+
+        <p class="text-[15px] md:text-[18px] text-black mt-2 leading-relaxed">
+         Formerly Sant Tukaram Salvation Mission, Malad
+        </p>
+
+ 
+
+        <!-- Address -->
+        <p class="text-black text-[18px] md:text-[22px] mt-4">
+          Established on <span class="font-bold">20th April 1950</span> , Sant Tukaram Pradnyavardhini is a Public
+           Charitable Trust dedicated to education, cultural preservation, and spiritual growth.
+        </p>
+
+        <!-- Accreditation -->
+        <div class="mt-12 flex flex-col items-center">
+
+          <div class="flex items-center justify-center gap-6">
+
+           <img
+  src="/images/75indexlogo.png"
+  alt="NAAC"
+  class="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain"
+/>
+
+            <div class="w-[1px] h-28 bg-gray-400"></div>
+
+           <div
+        class=" z-20 flex lg:flex-col items-center gap-4 "
       >
         <!-- Logo (Same Size as Circle) -->
 
         <!-- Circle Div -->
         <div
-          class="flex items-center justify-center text-center rounded-full border-[3px] animate-bg w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[200px] lg:h-[200px] text-[12px] sm:text-[14px] md:text-[18px] lg:text-[20px] font-semibold leading-tight bg-white/10 backdrop-blur-md shadow-xl"
+          class=" h-36 w-36 shadow-lg rounded-full bg-[#1a5276]  text-[#ffd28a]  flex items-center justify-center text-center text-sm"
           data-aos="zoom-in"
           data-aos-duration="1000"
         >
@@ -188,1239 +90,158 @@
           </span>
         </div>
       </div>
+          </div>
 
-      <!-- Background Slides -->
-      <div class="absolute inset-0 z-0">
-        <div class="slide bg1"></div>
-        <div class="slide bg2"></div>
-        <div class="slide bg3"></div>
-        <div class="slide bg4"></div>
-        <div class="slide bg5"></div>
-      </div>
-      <div class="absolute inset-0 bg-[rgba(26,83,118,0.5)] z-10 py-5  ">
-         <img
-          src="/images/75logo.jpeg"
-          alt="75 Logo"
-          class=" ml-10   w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[200px] lg:h-[200px] object-cover
-           rounded-full shadow-lg"
-          data-aos="fade-down"
-          data-aos-duration="800"
-        />
+          
+
+        </div>
       </div>
 
-      <!-- Content -->
-      <div
-        class="relative z-20 max-w-3xl mx-auto px-5 flex flex-col items-center justify-center"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+      <!-- RIGHT SIDE -->
+      <div class="flex items-center justify-center relative w-full px-4">
+
+  <!-- Vertical Divider -->
+  <div class="hidden md:block absolute left-0 top-0 h-full w-[1px] bg-[#f0d9b5]"></div>
+
+  <!-- Buttons Wrapper -->
+  <div class="flex flex-col gap-6 w-full max-w-[360px]">
+
+    <!-- ENGLISH MEDIUM DROPDOWN -->
+    <!-- ENGLISH MEDIUM BUTTON -->
+<a
+  href="english.html"
+  class="w-full bg-[#1a5276] hover:bg-[#154360] transition-all duration-300 text-[#ffd28a] font-semibold text-[17px] sm:text-[20px] md:text-[24px] px-5 sm:px-8 py-4 rounded-lg flex items-center justify-between shadow-md"
+>
+  <span>English Medium School</span>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="3"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M9 5l7 7-7 7"
+    />
+  </svg>
+</a>
+
+    <!-- MARATHI MEDIUM DROPDOWN -->
+    <div class="relative w-full">
+
+      <button
+        onclick="toggleDropdown('marathiDropdown','marathiArrow')"
+        class="w-full bg-[#1a5276] hover:bg-[#154360] transition-all duration-300 text-[#ffd28a] font-semibold text-[17px] sm:text-[20px] md:text-[24px] px-5 sm:px-8 py-4 rounded-lg flex items-center text-left justify-between shadow-md"
       >
-       
-        <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
-          Promoting Universal Brotherhood Through Vedic Principles
-        </h2>
-        <p class="text-lg mb-8 opacity-90">
-          Established on 20th April 1950, Sant Tukaram Pradnyavardhini is a
-          Public Charitable Trust dedicated to education, cultural preservation,
-          and spiritual growth.
-        </p>
-        <a
-          href="#founder"
-          class="inline-block bg-orange-600 hover:bg-transparent hover:border-orange-600 border-2 border-orange-600 px-8 py-3 rounded-full uppercase tracking-wider font-semibold transition"
+        <span>Marathi Medium School</span>
+
+        <svg
+          id="marathiArrow"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 transition-transform duration-300"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="3"
         >
-          Learn About Our Founder
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+      <!-- Dropdown -->
+      <div
+        id="marathiDropdown"
+        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-lg shadow-lg mt-2"
+      >
+        <a
+          href="/malad.html"
+          class="block px-5 py-4 text-[#1a5276] hover:bg-[#eaf4fb] font-medium"
+        >
+          Malad
+        </a>
+
+        <a
+          href="/borivali.html"
+          class="block px-5 py-4 text-[#1a5276] hover:bg-[#eaf4fb] font-medium border-t"
+        >
+          Borivali
+        </a>
+
+        <a
+          href="/virar.html"
+          class="block px-5 py-4 text-[#1a5276] hover:bg-[#eaf4fb] font-medium border-t"
+        >
+          Virar
         </a>
       </div>
-    </section>
-
-    <!-- Our Revered Personalities Section -->
-    <section id="revered" class="bg-white py-16 w-full">
-      <div
-        class="w-full mb-12 flex flex-col items-center justify-center gap-5"
-        data-aos="fade-down"
-      >
-        <h2
-          class="text-3xl md:text-4xl font-bold text-[#1a5276] text-center pb-4"
-        >
-          Our Revered Personalities
-        </h2>
-      </div>
-      <div
-        class="w-full flex flex-col lg:flex-row items-center justify-center gap-12 px-6"
-      >
-        <div
-          class="w-full sm:w-[85%] md:w-[65%] lg:w-[35%] h-[280px] sm:h-[320px] md:h-[420px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
-          <img
-            src="./images/sant tukaram.jpg"
-            alt="Sant Tukaram"
-            class="w-full h-full object-cover transition duration-500 hover:scale-105"
-          />
-        </div>
-        <div
-          class="w-full lg:w-[45%] bg-gray-50 p-6 md:p-8 rounded-2xl shadow-xl text-center lg:text-left"
-          data-aos="fade-left"
-          data-aos-duration="800"
-        >
-          <h3 class="text-2xl md:text-3xl font-bold text-[#1a5276] mb-2">
-            Sant Tukaram
-          </h3>
-          <p
-            class="text-orange-600 uppercase tracking-wider font-semibold mb-6 text-sm md:text-base"
-          >
-            1608 – 1645 | Spiritual Saint & Poet
-          </p>
-          <p
-            class="text-gray-700 leading-relaxed border-t pt-6 mb-4 text-sm md:text-base"
-          >
-            Sant Tukaram (1608–1645) is a revered and iconic figure in the
-            spiritual history of India. His life and teachings have left a deep
-            impact on the cultural and religious landscape of Maharashtra and
-            beyond. He was born in Dehu near Pune as Tukaram Bolhoba Aambile.
-          </p>
-          <p class="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
-            He is regarded as the first modern poet of Marathi literature. His
-            fearless stand against caste discrimination and meaningless rituals,
-            along with his deep devotion to Lord Vitthal, made him unique among
-            the saints of his time.
-          </p>
-          <div class="border-t pt-6 mt-4">
-            <h4 class="text-[#1a5276] font-semibold mb-3 text-2xl md:text-base">
-              संत तुकाराम महाराज
-            </h4>
-            <p class="text-gray-700 leading-relaxed mb-3 text-sm md:text-base">
-              संत तुकाराम यांचा जन्म १६०८ - १६४५ मध्ये महाराष्ट्रातील
-              पुण्याजवळील देहू गावात झाला. तुकाराम बोल्होबा आंबिले असे त्यांचे खरे
-              नाव आहे.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3 text-sm md:text-base">
-              संत तुकारामांचे सामाजिक कार्य सर्वसामान्य लोकांची वैचारिकता बदलून
-              नैतिक अधोगती थांबविणे हे होते.
-            </p>
-            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-              आपल्या जीवनातून आणि अभंगांतून शुद्ध परमार्थधर्माच्या स्थापनेचे
-              कार्य त्यांनी चालू ठेवले.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Revered Idols Section -->
-    <section id="idols" class="bg-white py-16 w-full">
-      <div
-        class="w-full flex flex-col lg:flex-row items-center justify-center gap-12 px-6"
-      >
-        <div
-          class="w-full lg:w-[45%] bg-gray-50 p-6 md:p-8 rounded-2xl shadow-xl text-center lg:text-left order-2 lg:order-1"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
-          <h3 class="text-2xl md:text-3xl font-bold text-[#1a5276] mb-2">
-            Maharshi Dayanand Saraswati
-          </h3>
-
-          <p
-            class="text-orange-600 uppercase tracking-wider font-semibold mb-6 text-sm md:text-base"
-          >
-            1824 | Social Reformer & Philosopher
-          </p>
-
-          <p
-            class="text-gray-700 leading-relaxed border-t pt-6 mb-4 text-sm md:text-base"
-          >
-            Dayanand Saraswati was born in 1824 at Tankara, Gujarat. His
-            original name was Mool Shankar Tiwari. He studied Vedic scriptures,
-            Upanishads, and other sacred texts in depth.
-          </p>
-
-          <p class="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
-            He was a great social reformer who strongly opposed regressive
-            practices in Hindu society such as untouchability and denial of
-            education to women. He also rejected idol worship.
-          </p>
-
-          <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-            To eliminate superstition, blind faith, and rituals, he founded the
-            Arya Samaj, which played a significant role in social and religious
-            reform in India.
-          </p>
-
-          <div class="border-t pt-6 mt-4">
-            <h4 class="text-[#1a5276] font-semibold mb-3 text-2xl md:text-base">
-              महर्षी दयानंद सरस्वती
-            </h4>
-
-            <p class="text-gray-700 leading-relaxed mb-3 text-sm md:text-base">
-              महर्षी दयानंद सरस्वती ह्यांचा जन्म १८२४ ला गुजरात मधील टंकारा येथे
-              झाला. त्यांनी वेद व उपनिषदांचा सखोल अभ्यास केला.
-            </p>
-
-            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-              धर्मातील अंधविश्वास आणि अवडंबर यांचा त्यांनी कडाडून विरोध केला.
-              नंतर त्यांनी आर्य समाज या संस्थेची स्थापना केली.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-[85%] md:w-[65%] lg:w-[35%] h-[280px] sm:h-[320px] md:h-[420px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2"
-          data-aos="fade-left"
-          data-aos-duration="800"
-        >
-          <img
-            src="./images/Swami_Dayanand_Saraswati.jpg"
-            alt="Maharshi Dayanand Saraswati"
-            class="w-full h-full object-cover transition duration-500 hover:scale-105"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Founder Section -->
-    <section id="founder" class="bg-white py-16 w-full">
-      <div
-        class="w-full mb-12 flex flex-col items-center justify-center gap-5"
-        data-aos="fade-down"
-      >
-        <h2
-          class="text-3xl md:text-4xl font-bold text-[#1a5276] text-center pb-4"
-        >
-          Our Founder
-        </h2>
-      </div>
-      <div
-        class="w-full flex flex-col lg:flex-row items-center justify-center gap-12 px-6"
-      >
-        <div
-          class="w-full sm:w-[85%] md:w-[65%] lg:w-[35%] h-[280px] sm:h-[320px] md:h-[420px] lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
-          <img
-            src="./images/founder(1).webp"
-            class="w-full h-full object-cover transition duration-500 hover:scale-105"
-          />
-        </div>
-        <div
-          class="w-full lg:w-[45%] bg-gray-50 p-6 md:p-8 rounded-2xl shadow-xl text-center lg:text-left"
-          data-aos="fade-left"
-          data-aos-duration="800"
-        >
-          <h3 class="text-2xl md:text-3xl font-bold text-[#1a5276] mb-2">
-            Bhalchandra R. Gokhale
-          </h3>
-          <p
-            class="text-orange-600 uppercase tracking-wider font-semibold mb-6 text-sm md:text-base"
-          >
-            Founder of Sant Tukaram Pradnyavardhini
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            <div>
-              <h4 class="text-sm text-[#1a5276] font-semibold">Birth</h4>
-              <p>5 August 1917</p>
-            </div>
-            <div>
-              <h4 class="text-sm text-[#1a5276] font-semibold">Death</h4>
-              <p>9 May 1980</p>
-            </div>
-            <div>
-              <h4 class="text-sm text-[#1a5276] font-semibold">Key Role</h4>
-              <p>Initiator & Chief Founder</p>
-            </div>
-            <div>
-              <h4 class="text-sm text-[#1a5276] font-semibold">Trustees</h4>
-              <p>Led 7 other trustees</p>
-            </div>
-          </div>
-          <p
-            class="text-gray-700 leading-relaxed border-t pt-6 mb-4 text-sm md:text-base"
-          >
-            Shri B. R. Gokhale was the visionary initiator who took the lead in
-            establishing Sant Tukaram Pradnyavardhini (erstwhile Sant Tukaram
-            Salvation Mission, Malad) along with 7 other trustees. His
-            leadership was instrumental in promoting Universal Brotherhood
-            through propagation of Vedic Principles and setting the foundation
-            for the trust's constitution adopted on 13th December 1953.
-          </p>
-          <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-            Under his guidance, the trust was registered at Thane
-            <span class="font-bold">[E-81 dated 1.1.1954]</span> and
-            subsequently at Mumbai
-            <span class="font-bold">[E4137 dated 19.12.1973]</span> ,
-            establishing a lasting legacy of education, cultural preservation,
-            and spiritual growth that continues to thrive today.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Activities Section -->
-    <section
-      id="activity"
-      class="w-full flex flex-col items-center py-16 lg:py-0"
-      data-aos="fade-up"
-    >
-      <div class="w-full py-6">
-        <h2
-          class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a5276] text-center"
-        >
-          Our Activities & Initiatives
-        </h2>
-      </div>
-      <div class="w-full flex justify-center lg:px-4 py-8">
-        <div class="w-full md:w-[75%] lg:w-[60%]">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="https://ik.imagekit.io/referindia/School/STP4.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="https://ik.imagekit.io/referindia/School/STP.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="https://ik.imagekit.io/referindia/School/STP2.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="https://ik.imagekit.io/referindia/School/STP3.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-cultural-performance.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-sports-event-students.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-achievement-event.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-cultural-event-performance.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-sports-award-ceremony.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/sts-mission-school-sports-award.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/students-award-group-photo.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/75-years-celebration-event.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/75th-year-celebration.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-75th-year-celebration.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-75th-celebration-group-photo.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-              <div
-                class="swiper-slide flex items-center justify-center h-[40vh] md:h-[50vh] lg:h-[60vh]"
-              >
-                <img
-                  src="./images/school-75th-year-celebration2.jpeg"
-                  class="max-h-full max-w-full object-contain rounded-xl"
-                />
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="bg-white w-full px-6 md:px-16 py-12">
-      <div class="w-full max-w-6xl mx-auto">
-        <div class="text-center mb-10" data-aos="fade-down">
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a5276]">
-            About Our Trust
-          </h2>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
-          <div class="flex-1" data-aos="fade-right" data-aos-duration="800">
-            <div
-              class="bg-white shadow-lg rounded-xl p-6 border-l-4 border-orange-600"
-            >
-              <h4 class="text-xl font-semibold text-[#1a5276] mb-3">
-                Our Mission
-              </h4>
-              <p
-                class="text-gray-700 leading-7 text-[15px] md:text-[16px] mb-2"
-              >
-                Inculcate Character and National Integrity through Education.
-              </p>
-              <p class="text-gray-700 leading-7 text-[15px] md:text-[16px]">
-                <span class="font-bold text-[#1a5276]"
-                  >संस्थेचे ध्येय-विधान:</span
-                >
-                शिक्षणाच्या माध्यमातून चारित्र्य व राष्ट्राभिमान रुजवणे
-              </p>
-            </div>
-            <div class="mt-8">
-              <h3 class="text-2xl font-bold text-[#1a5276] mb-4">
-                Our Approach
-              </h3>
-              <p class="text-gray-700 leading-7 text-[15px] md:text-[16px]">
-                We work through educational institutions, research centers,
-                publications, seminars, and community activities to achieve our
-                objectives of promoting harmony, education, and cultural
-                understanding.
-              </p>
-            </div>
-          </div>
-          <div class="flex-1" data-aos="fade-left" data-aos-duration="800">
-            <div
-              class="bg-white shadow-lg rounded-xl p-6 border-l-4 border-[#1a5276]"
-            >
-              <h4 class="text-xl font-semibold text-[#1a5276] mb-3">
-                Our Vision
-              </h4>
-              <p
-                class="text-gray-700 leading-7 text-[15px] md:text-[16px] mb-2"
-              >
-                Universal Brotherhood (Vasudhaiv Kutumbakam) through Education.
-              </p>
-              <p class="text-gray-700 leading-7 text-[15px] md:text-[16px]">
-                <span class="font-bold text-[#1a5276]"
-                  >संस्थेचे दृष्टी-विधान:</span
-                >
-                शिक्षणाद्वारे विश्वबंधुत्व (वसुधैव कुटुंबकम)
-              </p>
-            </div>
-            <div class="mt-8">
-              <h3 class="text-2xl font-bold text-[#1a5276] mb-4">
-                Key Focus Areas
-              </h3>
-              <ul
-                class="list-disc pl-6 space-y-2 text-gray-700 text-[15px] md:text-[16px]"
-              >
-                <li>Education at all levels</li>
-                <li>Cultural preservation and research</li>
-                <li>Health and wellness through Yoga</li>
-                <li>Spiritual teachings and values</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- trustee section -->
-
-      <section class="relative py-20 px-4 md:px-8">
-        <!-- Background layer with requested color: bg-[rgba(26,83,118,0.5)] -->
-        <div class="absolute inset-0 bg-[rgba(26,83,118,0.5)] -z-10"></div>
-        
-        <div class="max-w-7xl mx-auto relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-14 md:mb-16" data-aos="zoom-in-down">
-                <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-md">
-                    Our <span class="border-b-4 border-white pb-1">Trustees</span>
-                </h2>
-                <p class="text-white/80 text-base md:text-lg mt-4 max-w-2xl mx-auto">
-                    Dedicated leaders shaping our vision with integrity and excellence
-                </p>
-                <!-- <div class="w-20 h-1 bg-white mx-auto mt-6 rounded-full opacity-70"></div> -->
-            </div>
-
-            <!-- Trustee Cards Grid -->
-<div
-    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
-    data-aos="fade-up"
-    data-aos-duration="2000"
->
-
-    <!-- Card 1 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/dileepWakankar.jpeg"
-            alt="Dr. Dileep Wakankar"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Dr. Dileep Wakankar
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Chairman
-                </span>
-            </div>
-
-        </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/harish_ghashiram_jalan.jpeg"
-            alt="Harish Ghashiram Jalan"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Harish Ghashiram Jalan
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Vice Chairman
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/sanjayJoshi.jpeg"
-            alt="Sanjay Joshi"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Sanjay Joshi
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Secretary
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/mahesh_mestry.jpg"
-            alt="Mahesh Mestry"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Mahesh Mestry
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Joint Secretary
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/smitaJog.jpeg"
-            alt="Smita Jog"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Smita Jog
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Joint Secretary
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/BhushanB.Paithankar.jpeg"
-            alt="Bhushan B. Paithankar"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Bhushan B. Paithankar
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Treasurer
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 7 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/vijay_babaji_kondalkar.jpeg"
-            alt="Vijay Babaji Kondalkar"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Vijay Babaji Kondalkar
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Trustee
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 8 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/samir_bhatkar.jpg"
-            alt="Samir Bhatkar"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Samir Bhatkar
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Member
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 9 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/manish_kajale.jpg"
-            alt="Manish Kajale"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Manish Kajale
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Member
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 10 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/veena_kelkar.jpg"
-            alt="Veena Kelkar"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Veena Kelkar
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Member
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 11 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/sharad_sathe.jpg"
-            alt="Sharad Sathe"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Sharad Sathe
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Member
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Card 12 -->
-    <div class="trustee-card relative rounded-xl overflow-hidden shadow-lg h-72 sm:h-80">
-
-        <img
-            src="./images/vasudev_arekar.jpg"
-            alt="Vasudev Arekar"
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-
-        <div class="relative z-10 flex flex-col justify-end h-full p-3">
-
-            <h3 class="text-white text-sm sm:text-lg font-bold leading-tight drop-shadow-lg">
-                Vasudev Arekar
-            </h3>
-
-            <div class="mt-2">
-                <span class="bg-white text-black text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                    Member
-                </span>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-        </div>
-    </section>
-
-
-
-    <!-- Objectives Section -->
-    <section id="objective" class="w-full bg-[#f3f4f6] pt-15">
-      <div
-        class="flex items-center justify-center mt-5 mb-10"
-        data-aos="fade-down"
-      >
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1a5276] text-center">
-          Our Aims & Objectives
-        </h2>
-      </div>
-      <div class="px-6 md:px-12 lg:px-20 pb-16">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-start border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
-            data-aos="zoom-in"
-            data-aos-duration="600"
-          >
-            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
-              Education & Institutions
-            </h3>
-            <p class="text-gray-700 leading-7 text-[15px]">
-              To propagate universal brotherhood through education, establishing
-              Pre-primary to Higher secondary Schools, Residential schools,
-              Hostels, Colleges and Institutions for Arts, Science, Commerce,
-              Medical, Technological, Technical, Architecture, Skill
-              development, Sanskrit and Vedic Pathshalas.
-            </p>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
-            data-aos="zoom-in"
-            data-aos-duration="600"
-            data-aos-delay="100"
-          >
-            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
-              Libraries & Health Centers
-            </h3>
-            <p class="text-gray-700 leading-7 text-[15px]">
-              Establish Libraries, Gymnasiums, Yoga and Health Centers to
-              promote physical and mental well-being alongside intellectual
-              growth.
-            </p>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
-            data-aos="zoom-in"
-            data-aos-duration="600"
-            data-aos-delay="200"
-          >
-            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
-              Research Centers
-            </h3>
-            <p class="text-gray-700 leading-7 text-[15px]">
-              Establish Research Centers for the Studies in Indian Literature,
-              Culture, Arts and History to preserve and promote India's rich
-              heritage.
-            </p>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
-            data-aos="zoom-in"
-            data-aos-duration="600"
-            data-aos-delay="300"
-          >
-            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
-              Lectures & Publications
-            </h3>
-            <p class="text-gray-700 leading-7 text-[15px]">
-              Organize Lectures, Workshops, Seminars, Forums, Publications,
-              Exhibitions for propagation of its Objectives and sharing
-              knowledge.
-            </p>
-          </div>
-          <div
-            class="bg-white rounded-xl shadow-md p-6 flex flex-col border-t-4 border-[#1a5276] transition duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
-            data-aos="zoom-in"
-            data-aos-duration="600"
-            data-aos-delay="400"
-          >
-            <h3 class="text-lg font-semibold text-[#1a5276] mb-4">
-              Spiritual Teachings
-            </h3>
-            <p class="text-gray-700 leading-7 text-[15px]">
-              Propagate teachings of Maharshi Dayanand Saraswati and Sant
-              Tukaram to promote spiritual growth and ethical living.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="w-full bg-white py-10 md:py-16">
-      <div class="w-full text-center mb-10" data-aos="fade-down">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a5276]">
-          Contact Information
-        </h2>
-      </div>
-      <div
-        class="flex flex-col md:flex-row max-w-6xl mx-auto px-6 lg:px-12 gap-8 md:gap-12 items-stretch"
-      >
-        <div
-          class="flex-1 flex flex-col justify-center space-y-8"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
-          <div class="flex gap-4">
-            <i class="ri-mail-line text-2xl text-[#1a5276] mt-1"></i>
-            <div>
-              <h4 class="font-semibold text-lg">Email Address</h4>
-              <p class="text-gray-700 mt-1">stsmission@gmail.com</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <i class="ri-map-pin-line text-2xl text-[#1a5276] mt-1"></i>
-            <div>
-              <h4 class="font-semibold text-lg">Registered Address</h4>
-              <p class="text-gray-700 mt-1 leading-7">
-                Gajanan Niwas, Off Liberty Garden Road No. 1, Opposite Trimurti
-                Tower, Malad West, Mumbai – 400064
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1" data-aos="fade-left" data-aos-duration="800">
-          <div
-            class="rounded-xl overflow-hidden shadow-xl h-[300px] sm:h-[350px] md:h-full min-h-[300px]"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.9527023344344!2d72.84124767435276!3d19.18639304849928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6faba029f89%3A0xfeebe8da6d9ec825!2sSts%20Mission%20English%20High%20School!5e1!3m2!1sen!2sin!4v1766896219503!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-   <footer class="bg-[#1a5276] text-white pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 text-center md:text-left">
-
-            <!-- Column 1 -->
-            <div class="text-center" data-aos="fade-up" data-aos-duration="600">
-                <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
-                    Sant Tukaram Pradnyavardhini
-                </h4>
-
-                <p class="text-gray-300 leading-7">
-                    Formerly Sant Tukaram Salvation Mission, Malad
-                </p>
-
-                <p class="text-gray-300 mt-4 leading-7">
-                    A Public Charitable Trust established in 1950
-                </p>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
-                    Our Mission
-                </h4>
-
-                <p class="text-gray-300 leading-7 md:max-w-sm mx-auto">
-                    To promote Universal Brotherhood through propagation of Vedic Principles and education for all.
-                </p>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="text-center relative"
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="200">
-
-                <h4 class="text-[#f39c12] text-xl font-semibold mb-5">
-                    Quick Links
-                </h4>
-
-                <ul class="space-y-3 text-gray-300">
-
-                    <li>
-                        <a href="#home" class="hover:text-white transition duration-300">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#founder" class="hover:text-white transition duration-300">
-                            Founder
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about" class="hover:text-white transition duration-300">
-                            About Us
-                        </a>
-                    </li>
-
-                    <!-- Education Dropdown -->
-                    <li class="relative inline-block">
-
-                        <!-- Education Button -->
-                        <button
-                            id="education-btn"
-                            class="flex items-center justify-center md:justify-start gap-1 hover:text-white transition duration-300 mx-auto md:mx-0"
-                        >
-                             Schools
-                            <i class="ri-arrow-down-s-line"></i>
-                        </button>
-
-                        <!-- Main Dropdown -->
-                        <div
-                            id="education-menu"
-                            class="hidden absolute top-full left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 mt-2 w-56 bg-white text-black rounded shadow-lg z-50 text-left"
-                        >
-
-                            <!-- English -->
-                            <a
-                                href="/english.html"
-                                class="block px-4 py-2 hover:bg-gray-100"
-                            >
-                                English
-                            </a>
-
-                            <!-- Marathi -->
-                            <div class="relative">
-
-                                <!-- Marathi Button -->
-                                <button
-                                    id="marathi-btn-footer"
-                                    class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-100"
-                                >
-                                    Marathi
-
-                                    <!-- Desktop Arrow -->
-                                    <i class="ri-arrow-right-s-line hidden md:block"></i>
-
-                                    <!-- Mobile Arrow -->
-                                    <i class="ri-arrow-down-s-line md:hidden"></i>
-                                </button>
-
-                                <!-- Marathi Dropdown -->
-                                <div
-                                    id="marathi-menu-footer"
-                                    class="hidden md:absolute md:top-0 md:left-full md:w-56 w-full bg-white rounded shadow-lg relative"
-                                >
-
-                                    <a
-                                        href="/malad.html"
-                                        class="block px-4 py-2 hover:bg-gray-100"
-                                    >
-                                        Malad Premises
-                                    </a>
-
-                                    <a
-                                        href="/virar.html"
-                                        class="block px-4 py-2 hover:bg-gray-100"
-                                    >
-                                        Virar Premises
-                                    </a>
-
-                                    <a
-                                        href="/borivali.html"
-                                        class="block px-4 py-2 hover:bg-gray-100"
-                                    >
-                                        Borivali Premises
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#objective" class="hover:text-white transition duration-300">
-                            Objectives
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="hover:text-white transition duration-300">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
-        <!-- Bottom -->
-        <div class="border-t border-white/20 mt-14 pt-6 text-center font-semibold">
-            <p class="text-gray-300 text-sm">
-                &copy; 2026 Sant Tukaram Pradnyavardhini. All Rights Reserved.
-            </p>
-        </div>
-
-    </div>
-</footer>
-
-    <!-- WhatsApp Float -->
+    <!-- TRUST WEBSITE BUTTON -->
     <a
-      href="https://wa.me/919930058877?text=Hello%20there"
-      class="whatsapp-float"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      ><i class="ri-whatsapp-line"></i
-    ></a>
+      href="/home.html"
+      class="w-full bg-[#1a5276] hover:bg-[#154360] transition-all duration-300 text-[#ffd28a] font-semibold text-[17px] sm:text-[20px] md:text-[24px] px-5 sm:px-8 py-4 rounded-lg flex items-center justify-between shadow-md"
+    >
+      <span>Continue to Trust Website</span>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        once: false,
-        mirror: false,
-      });
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="3"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </a>
 
-      // Initialize Swiper
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 20,
-        centeredSlides: true,
-        autoplay: { delay: 3000, disableOnInteraction: false },
-        pagination: { el: ".swiper-pagination", clickable: true },
-      });
+  </div>
+</div>
 
-      // Mobile menu toggle
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const eduBtn = document.getElementById("edu-btn");
-      const eduMenu = document.getElementById("edu-menu");
-      const marathiBtn = document.getElementById("marathi-btn");
-      const marathiMenu = document.getElementById("marathi-menu");
 
-      if (menuBtn)
-        menuBtn.addEventListener("click", () =>
-          mobileMenu.classList.toggle("hidden"),
-        );
-      if (eduBtn)
-        eduBtn.addEventListener("click", () =>
-          eduMenu.classList.toggle("hidden"),
-        );
-      if (marathiBtn)
-        marathiBtn.addEventListener("click", () =>
-          marathiMenu.classList.toggle("hidden"),
-        );
 
-        
-        // Close mobile menu on scroll
-window.addEventListener("scroll", () => {
-  if (!mobileMenu.classList.contains("hidden")) {
-    mobileMenu.classList.add("hidden");
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+<script>
+  function toggleDropdown(dropdownId, arrowId) {
+    const dropdown = document.getElementById(dropdownId);
+    const arrow = document.getElementById(arrowId);
+
+    const isOpen = dropdown.classList.contains("max-h-60");
+
+    // Close all dropdowns
+    document.querySelectorAll('[id$="Dropdown"]').forEach((menu) => {
+      menu.classList.remove("max-h-60");
+      menu.classList.add("max-h-0");
+    });
+
+    document.querySelectorAll('[id$="Arrow"]').forEach((icon) => {
+      icon.classList.remove("rotate-180");
+    });
+
+    // Open selected dropdown
+    if (!isOpen) {
+      dropdown.classList.remove("max-h-0");
+      dropdown.classList.add("max-h-60");
+
+      arrow.classList.add("rotate-180");
+    }
   }
-});
-    </script>
-   <script>
-    // Education Toggle
-    const educationBtn = document.getElementById("education-btn");
-    const educationMenu = document.getElementById("education-menu");
-
-    educationBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        educationMenu.classList.toggle("hidden");
-    });
-
-    // Marathi Toggle
-    const marathiBtnFooter = document.getElementById("marathi-btn-footer");
-    const marathiMenuFooter = document.getElementById("marathi-menu-footer");
-
-    marathiBtnFooter.addEventListener("click", (e) => {
-        e.stopPropagation();
-        marathiMenuFooter.classList.toggle("hidden");
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", (e) => {
-        if (
-            !educationBtn.contains(e.target) &&
-            !educationMenu.contains(e.target)
-        ) {
-            educationMenu.classList.add("hidden");
-            marathiMenuFooter.classList.add("hidden");
-        }
-    });
 </script>
-    
-  </body>
+</body>
 </html>
